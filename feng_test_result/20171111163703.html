@@ -1,0 +1,1643 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>自动化测试报告</title>
+    <meta name="generator" content="HTMLTestRunner 0.8.2"/>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+    
+<style type="text/css" media="screen">
+body        { font-family: verdana, arial, helvetica, sans-serif; font-size: 80%; }
+table       { font-size: 100%; }
+pre         { }
+
+/* -- heading ---------------------------------------------------------------------- */
+h1 {
+    font-size: 16pt;
+    color: gray;
+}
+.heading {
+    margin-top: 0ex;
+    margin-bottom: 1ex;
+}
+
+.heading .attribute {
+    margin-top: 1ex;
+    margin-bottom: 0;
+}
+
+.button{  
+    border:1px solid #cccccc;  
+    cursor:pointer;  
+    margin:10px 5px;  
+    height:40px;  
+    text-align:center;  
+    border-radius: 4px;  
+    border-color: #636263 #464647 #A1A3A5;  
+    text-shadow: 0 1px 1px #F6F6F6;  
+    background-image: -moz-linear-gradient(center top, #D9D9D9, #A6A6A6 49%, #A6A6A6 50%);  
+    background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0, #D9D9D9),color-stop(1, #A6A6A6));  
+}  
+
+.buttonText{  
+    position:relative;  
+    font-weight:bold;  
+    top:10px;
+    color:#58595B;  
+}   
+
+.heading .description {
+    margin-top: 4ex;
+    margin-bottom: 6ex;
+}
+
+.panel .description{  
+    border:1px solid #CCCCCC;  
+    border-color: #636263 #464647 #A1A3A5;  
+    margin:10px 5px;  
+    height:165px;  
+    border-radius: 4px;  
+}  
+.scroll-item {  
+    position: relative;  
+    width: 100%;  
+    height: 32px;  
+    border-bottom:1px solid gray;  
+    cursor: pointer;  
+}  
+.item-even {  
+    background-color: #E7E8EC;  
+}  
+      
+.item-odd {  
+    background-color: #E0ECF6;  
+}  
+.rect {  
+    float: left;  
+    margin-top: 5px;  
+    margin-left: 5px;  
+    width: 20px;  
+    height: 20px;  
+    border-radius: 3px;  
+}  
+.item-text{  
+    margin-left: 5px;  
+    height: 100%;  
+    float: left;  
+    font-size: 14px;   
+    vertical-align: middle;  
+    display: inline-block;  
+    line-height: 30px;  
+}  
+
+.bg{  
+    position:absolute;  
+    height:97%;  
+    width:80%;  
+    overflow-x: hidden;  
+    overflow-y:hidden;  
+}  
+.panel{  
+    position:absolute;  
+    height:550px;  
+    width:750px;  
+    left:45px;  
+    top:45px;  
+    border-radius: 12px;  
+    background-image: -moz-linear-gradient(top,#EBEBEB, #BFBFBF);  
+    background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0, #EBEBEB),color-stop(1, #BFBFBF));  
+    }  
+.panel1{  
+    position:absolute;  
+    height:550px;  
+    width:200px;  
+    left:800px;  
+    top:45px;  
+    border-radius: 12px;  
+    background-image: -moz-linear-gradient(top,#EBEBEB, #BFBFBF);  
+    background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0, #EBEBEB),color-stop(1, #BFBFBF));  
+    } 
+.panelBg{  
+    position:absolute;  
+    height:600px;  
+    width:1000px;  
+    left:20px;  
+    top:20px;  
+    border-radius: 12px;  
+    background-color:#000000;  
+    opacity:0.5;  
+}  
+
+.title{  
+    border:1px solid green;  
+    position:relative;  
+    margin:5px;  
+    font-size:22px;  
+    font-weight:bold;  
+    text-align:center;  
+    color:#58595B;  
+} 
+
+.piechart{  
+    border:1px solid green;  
+    margin:5px;  
+    height:170px;  
+} 
+
+.barchart{  
+    border:1px solid green;  
+    margin:5px;  
+    height:170px;  
+}  
+
+.linechart{  
+    border:1px solid green;  
+    margin:5px;  
+    height:170px;  
+} 
+     
+.subTitle{  
+    border:1px solid green;  
+    margin:5px;   
+    font-size:14px;  
+    height:70px;  
+    font-weight:bold;  
+    text-indent:2em;  
+    color:#6D6E71;  
+}  
+
+/* -- css div popup ------------------------------------------------------------------------ */
+a.popup_link {
+}
+
+a.popup_link:hover {
+    color: red;
+}
+
+.popup_window {
+    display: none;
+    position: relative;
+    left: 0px;
+    top: 0px;
+    /*border: solid #627173 1px; */
+    padding: 10px;
+    background-color: #E6E6D6;
+    font-family: "Lucida Console", "Courier New", Courier, monospace;
+    text-align: left;
+    font-size: 8pt;
+    width: 500px;
+}
+
+}
+/* -- report ------------------------------------------------------------------------ */
+#show_detail_line {
+    margin-top: 3ex;
+    margin-bottom: 1ex;
+}
+#result_table {
+    width: 80%;
+    border-collapse: collapse;
+    border: 1px solid #777;
+}
+#header_row {
+    font-weight: bold;
+    color: white;
+    background-color: #777;
+}
+#result_table td {
+    border: 2px solid #777;
+    padding: 3px;
+}
+#total_row  { font-weight: bold; }
+.passClass  { background-color: #6c6; }
+.failClass  { background-color: #c60; }
+.errorClass { background-color: #c00; }
+.passCase   { color: #6c6; font-weight: bold;}
+.failCase   { color: #c60; font-weight: bold; }
+.errorCase  { color: #c00; font-weight: bold; }
+.hiddenRow  { display: none; }
+.testcase   { margin-left: 2em; }
+
+#section1{  
+    border:1px solid green;  
+    position:relative;  
+    float:left;  
+    width:235px;  
+    height:530px;  
+    top:10px;  
+    left:10px;  
+}  
+#section2{  
+    border:1px solid green;  
+    position:relative;  
+    float:left;  
+    width:235px;  
+    height:530px;  
+    top:10px;  
+    left:20px;  
+}  
+#section3{  
+    border:1px solid green;  
+    position:relative;  
+    float:left;  
+    width:235px;  
+    height:530px;  
+    top:10px;  
+    left:30px;  
+}  
+#section4{  
+    border:1px solid green;  
+    position:relative;  
+    float:left;  
+    width:180px;  
+    height:530px;  
+    top:10px;  
+    left:10px;  
+}  
+
+/* -- ending ---------------------------------------------------------------------- */
+#ending {
+}
+
+</style>
+
+</head>
+<body style="background-color:#C0C0C0" >
+<script language="javascript" type="text/javascript"><!--
+output_list = Array();
+
+/* level - 0:Summary; 1:Pass; 2:Fail; 3:Error; 4:All */
+function showCase(level) {
+    trs = document.getElementsByTagName("tr");
+    for (var i = 0; i < trs.length; i++) {
+        tr = trs[i];
+        id = tr.id;
+        if (id.substr(0,2) == 'Ft') {
+            if (level == 2) {
+                tr.className = '';
+            }
+            else if(level == 4) {
+                tr.className = '';
+            }
+            else if(level == 5) {
+                tr.className = '';
+            }
+            else{
+                tr.className = 'hiddenRow';
+            }
+        }
+        if (id.substr(0,2) == 'Pt') {
+            if (level == 1) {
+                tr.className = '';
+            }
+            else if(level == 4 ) {
+                tr.className = '';
+            }
+            else{
+                tr.className = 'hiddenRow';
+            }
+        }
+        if (id.substr(0,2) == 'Et') {
+            if (level == 3) {
+                tr.className = '';
+            }
+            else if(level == 4 ) {
+                tr.className = '';
+            }
+            else if(level == 5 ) {
+                tr.className = '';
+            }
+            else{
+                tr.className = 'hiddenRow';
+            }
+        }
+    }
+}
+
+function showClassDetail(cid, count) {
+    var id_list = Array(count);
+    var toHide = 1;
+    for (var i = 0; i < count; i++) {
+        tid0 = 't' + cid.substr(1) + '.' + (i+1);
+        tid = 'F' + tid0;
+        tr = document.getElementById(tid);
+        if (!tr) {
+            tid = 'P' + tid0;
+            tr = document.getElementById(tid);
+            if(!tr){
+                tid = 'E' + tid0;
+                tr = document.getElementById(tid);
+            }
+        }
+        id_list[i] = tid;
+        if (tr.className) {
+            toHide = 0;
+        }
+    }
+    for (var i = 0; i < count; i++) {
+        tid = id_list[i];
+        if (toHide) {
+            document.getElementById('div_'+tid).style.display = 'none'
+            document.getElementById(tid).className = 'hiddenRow';
+        }
+        else {
+            document.getElementById(tid).className = '';
+        }
+    }
+}
+
+
+function showTestDetail(div_id){
+    var details_div = document.getElementById(div_id)
+    var displayState = details_div.style.display
+    // alert(displayState)
+    if (displayState != 'block' ) {
+        displayState = 'block'
+        details_div.style.display = 'block'
+    }
+    else {
+        details_div.style.display = 'none'
+    }
+}
+
+
+function html_escape(s) {
+    s = s.replace(/&/g,'&amp;');
+    s = s.replace(/</g,'&lt;');
+    s = s.replace(/>/g,'&gt;');
+    return s;
+}
+
+/* obsoleted by detail in <div>
+function showOutput(id, name) {
+    var w = window.open("", //url
+                    name,
+                    "resizable,scrollbars,status,width=800,height=450");
+    d = w.document;
+    d.write("<pre>");
+    d.write(html_escape(output_list[id]));
+    d.write("\n");
+    d.write("<a href='javascript:window.close()'>close</a>\n");
+    d.write("</pre>\n");
+    d.close();
+}
+*/
+--></script>
+
+<div class='heading'>
+<h1>自动化测试报告</h1>
+<p class='attribute'><strong>Start Time:</strong> 2017-11-11 16:37:03</p>
+<p class='attribute'><strong>Duration:</strong> 0:25:48.776000</p>
+<p class='attribute'><strong>Status:</strong> Pass 22 Error 1</p>
+
+<p class='description'>用例执行情况：</p>
+</div>
+
+
+
+<p id='show_detail_line'>Show
+<a href='javascript:showCase(0)'>Summary</a>
+<a href='javascript:showCase(1)'>Pass</a>
+<a href='javascript:showCase(2)'>Fail</a>
+<a href='javascript:showCase(3)'>Error</a>
+<a href='javascript:showCase(5)'>Fail&Error</a>
+<a href='javascript:showCase(4)'>All</a>
+</p>
+<table id='result_table'>
+<colgroup>
+<col align='left' />
+<col align='right' />
+<col align='right' />
+<col align='right' />
+<col align='right' />
+<col align='right' />
+</colgroup>
+<tr id='header_row'>
+    <td>Test Group/Test case</td>
+    <td>Count</td>
+    <td>Pass</td>
+    <td>Fail</td>
+    <td>Error</td>
+    <td>CaseInfo</td>
+</tr>
+
+<tr class='passClass'>
+    <td>test_case001_Login.Test_login</td>
+    <td>8</td>
+    <td>8</td>
+    <td>0</td>
+    <td>0</td>
+    <td><a href="javascript:showClassDetail('c1',8)">Detail</a></td>
+</tr>
+
+<tr id='Pt1.1' class='hiddenRow'>
+    <td class='passCase'><div class='testcase'>test01: 验证账号为空，输入密码不可登陆</div></td>
+    <td colspan='4' align='center'>
+
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_Pt1.1')" >
+        pass</a>
+
+    <div id='div_Pt1.1' class="popup_window">
+        <div style='text-align: right; color:red;cursor:pointer'>
+        <a onfocus='this.blur();' onclick="document.getElementById('div_Pt1.1').style.display = 'none' " >
+           [x]</a>
+        </div>
+        <pre>
+        
+Pt1.1: [2017-11-11 16:37:34,936](INFO)root : *************************************************************
+[2017-11-11 16:37:34,936](INFO)root : &gt;&gt;&gt;点击控件获取：android:id/button1
+[2017-11-11 16:38:15,314](INFO)root : 手机系统不兼容，无法获取到授权允许，默认等待三十秒！
+[2017-11-11 16:38:18,366](INFO)root : &gt;&gt;&gt;点击控件获取：com.henji.yunyi.yizhibang:id/guide_bt_go
+[2017-11-11 16:38:28,637](INFO)root : &gt;&gt;&gt;获取元素：com.henji.yunyi.yizhibang:id/et_login_phone
+[2017-11-11 16:38:30,449](INFO)root : &gt;&gt;&gt;定位控件com.henji.yunyi.yizhibang:id/et_login_password,输入内容为：123456
+[2017-11-11 16:38:31,485](INFO)root : 输入密码为123456
+[2017-11-11 16:38:31,485](INFO)root : &gt;&gt;&gt;点击控件获取：com.henji.yunyi.yizhibang:id/btn_login_submit
+
+
+        </pre>
+    </div>
+    <!--css div popup end-->
+
+    </td>
+    <td colspan='1' align='center'>
+No Case Detail
+</td>
+</tr>
+
+<tr id='Pt1.2' class='hiddenRow'>
+    <td class='passCase'><div class='testcase'>test02: 验证账号输入正确，密码为空</div></td>
+    <td colspan='4' align='center'>
+
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_Pt1.2')" >
+        pass</a>
+
+    <div id='div_Pt1.2' class="popup_window">
+        <div style='text-align: right; color:red;cursor:pointer'>
+        <a onfocus='this.blur();' onclick="document.getElementById('div_Pt1.2').style.display = 'none' " >
+           [x]</a>
+        </div>
+        <pre>
+        
+Pt1.2: [2017-11-11 16:39:05,050](INFO)root : *************************************************************
+[2017-11-11 16:39:05,051](INFO)root : &gt;&gt;&gt;获取元素：com.henji.yunyi.yizhibang:id/et_login_phone
+[2017-11-11 16:39:06,816](INFO)root : &gt;&gt;&gt;获取元素：com.henji.yunyi.yizhibang:id/et_login_password
+[2017-11-11 16:39:08,753](INFO)root : &gt;&gt;&gt;定位控件com.henji.yunyi.yizhibang:id/et_login_phone,输入内容为：13590283182
+[2017-11-11 16:39:09,430](INFO)root : &gt;&gt;&gt;点击控件获取：com.henji.yunyi.yizhibang:id/btn_login_submit
+
+
+        </pre>
+    </div>
+    <!--css div popup end-->
+
+    </td>
+    <td colspan='1' align='center'>
+No Case Detail
+</td>
+</tr>
+
+<tr id='Pt1.3' class='hiddenRow'>
+    <td class='passCase'><div class='testcase'>test03: 验证输入小于11账号,不输入密码</div></td>
+    <td colspan='4' align='center'>
+
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_Pt1.3')" >
+        pass</a>
+
+    <div id='div_Pt1.3' class="popup_window">
+        <div style='text-align: right; color:red;cursor:pointer'>
+        <a onfocus='this.blur();' onclick="document.getElementById('div_Pt1.3').style.display = 'none' " >
+           [x]</a>
+        </div>
+        <pre>
+        
+Pt1.3: [2017-11-11 16:39:42,743](INFO)root : *************************************************************
+[2017-11-11 16:39:42,744](INFO)root : &gt;&gt;&gt;获取元素：com.henji.yunyi.yizhibang:id/et_login_phone
+[2017-11-11 16:39:44,415](INFO)root : &gt;&gt;&gt;获取元素：com.henji.yunyi.yizhibang:id/et_login_password
+[2017-11-11 16:39:46,320](INFO)root : &gt;&gt;&gt;定位控件com.henji.yunyi.yizhibang:id/et_login_phone,输入内容为：1359028318
+[2017-11-11 16:39:46,958](INFO)root : &gt;&gt;&gt;点击控件获取：com.henji.yunyi.yizhibang:id/btn_login_submit
+
+
+        </pre>
+    </div>
+    <!--css div popup end-->
+
+    </td>
+    <td colspan='1' align='center'>
+No Case Detail
+</td>
+</tr>
+
+<tr id='Pt1.4' class='hiddenRow'>
+    <td class='passCase'><div class='testcase'>test04: 验证输入小于11账号，输入非正确密码</div></td>
+    <td colspan='4' align='center'>
+
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_Pt1.4')" >
+        pass</a>
+
+    <div id='div_Pt1.4' class="popup_window">
+        <div style='text-align: right; color:red;cursor:pointer'>
+        <a onfocus='this.blur();' onclick="document.getElementById('div_Pt1.4').style.display = 'none' " >
+           [x]</a>
+        </div>
+        <pre>
+        
+Pt1.4: [2017-11-11 16:40:21,161](INFO)root : *************************************************************
+[2017-11-11 16:40:21,162](INFO)root : &gt;&gt;&gt;获取元素：com.henji.yunyi.yizhibang:id/et_login_phone
+[2017-11-11 16:40:22,924](INFO)root : &gt;&gt;&gt;获取元素：com.henji.yunyi.yizhibang:id/et_login_password
+[2017-11-11 16:40:24,875](INFO)root : &gt;&gt;&gt;定位控件com.henji.yunyi.yizhibang:id/et_login_phone,输入内容为：1359028318
+[2017-11-11 16:40:25,558](INFO)root : &gt;&gt;&gt;定位控件com.henji.yunyi.yizhibang:id/et_login_password,输入内容为：1234
+[2017-11-11 16:40:26,664](INFO)root : &gt;&gt;&gt;点击控件获取：com.henji.yunyi.yizhibang:id/btn_login_submit
+
+
+        </pre>
+    </div>
+    <!--css div popup end-->
+
+    </td>
+    <td colspan='1' align='center'>
+No Case Detail
+</td>
+</tr>
+
+<tr id='Pt1.5' class='hiddenRow'>
+    <td class='passCase'><div class='testcase'>test05: 输入正确号码但多输入一位，输入错误密码</div></td>
+    <td colspan='4' align='center'>
+
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_Pt1.5')" >
+        pass</a>
+
+    <div id='div_Pt1.5' class="popup_window">
+        <div style='text-align: right; color:red;cursor:pointer'>
+        <a onfocus='this.blur();' onclick="document.getElementById('div_Pt1.5').style.display = 'none' " >
+           [x]</a>
+        </div>
+        <pre>
+        
+Pt1.5: [2017-11-11 16:41:00,220](INFO)root : *************************************************************
+[2017-11-11 16:41:00,221](INFO)root : &gt;&gt;&gt;获取元素：com.henji.yunyi.yizhibang:id/et_login_phone
+[2017-11-11 16:41:01,997](INFO)root : &gt;&gt;&gt;获取元素：com.henji.yunyi.yizhibang:id/et_login_password
+[2017-11-11 16:41:03,910](INFO)root : &gt;&gt;&gt;定位控件com.henji.yunyi.yizhibang:id/et_login_phone,输入内容为：135902831821
+[2017-11-11 16:41:04,582](INFO)root : &gt;&gt;&gt;定位控件com.henji.yunyi.yizhibang:id/et_login_password,输入内容为：1234
+[2017-11-11 16:41:10,937](INFO)root : 13590283182等于13590283182，输入超过11位手机号码，只截取显示前11位
+[2017-11-11 16:41:10,938](INFO)root : &gt;&gt;&gt;点击控件获取：com.henji.yunyi.yizhibang:id/btn_login_submit
+
+
+        </pre>
+    </div>
+    <!--css div popup end-->
+
+    </td>
+    <td colspan='1' align='center'>
+No Case Detail
+</td>
+</tr>
+
+<tr id='Pt1.6' class='hiddenRow'>
+    <td class='passCase'><div class='testcase'>test06: 输入正确号码但多输入一位,输入正确密码</div></td>
+    <td colspan='4' align='center'>
+
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_Pt1.6')" >
+        pass</a>
+
+    <div id='div_Pt1.6' class="popup_window">
+        <div style='text-align: right; color:red;cursor:pointer'>
+        <a onfocus='this.blur();' onclick="document.getElementById('div_Pt1.6').style.display = 'none' " >
+           [x]</a>
+        </div>
+        <pre>
+        
+Pt1.6: [2017-11-11 16:41:43,845](INFO)root : *************************************************************
+[2017-11-11 16:41:43,846](INFO)root : &gt;&gt;&gt;获取元素：com.henji.yunyi.yizhibang:id/et_login_phone
+[2017-11-11 16:41:45,559](INFO)root : &gt;&gt;&gt;获取元素：com.henji.yunyi.yizhibang:id/et_login_password
+[2017-11-11 16:41:47,492](INFO)root : &gt;&gt;&gt;定位控件com.henji.yunyi.yizhibang:id/et_login_phone,输入内容为：135902831821
+[2017-11-11 16:41:51,145](INFO)root : &gt;&gt;&gt;定位控件com.henji.yunyi.yizhibang:id/et_login_password,输入内容为：123456
+[2017-11-11 16:41:54,905](INFO)root : 13590283182等于13590283182，输入超过11位手机号码，只截取显示前11位
+[2017-11-11 16:41:54,905](INFO)root : &gt;&gt;&gt;点击控件获取：com.henji.yunyi.yizhibang:id/btn_login_submit
+[2017-11-11 16:42:10,117](INFO)root : 输入正确号码但多输入一位,输入正确密码，成功截取账号前11位，登录成功
+[2017-11-11 16:42:20,807](INFO)root : 开始退出app
+[2017-11-11 16:42:20,877](INFO)root : 获取到“我”控件元素
+[2017-11-11 16:42:31,611](INFO)root : 点击“我”之后，未获取到“换一批”元素控件——页面已经跳转
+[2017-11-11 16:42:32,592](INFO)root : 点击“设置”
+[2017-11-11 16:42:33,942](INFO)root : 点击"退出登录"
+
+
+        </pre>
+    </div>
+    <!--css div popup end-->
+
+    </td>
+    <td colspan='1' align='center'>
+No Case Detail
+</td>
+</tr>
+
+<tr id='Pt1.7' class='hiddenRow'>
+    <td class='passCase'><div class='testcase'>test07: 输入非数字账号</div></td>
+    <td colspan='4' align='center'>
+
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_Pt1.7')" >
+        pass</a>
+
+    <div id='div_Pt1.7' class="popup_window">
+        <div style='text-align: right; color:red;cursor:pointer'>
+        <a onfocus='this.blur();' onclick="document.getElementById('div_Pt1.7').style.display = 'none' " >
+           [x]</a>
+        </div>
+        <pre>
+        
+Pt1.7: [2017-11-11 16:43:07,013](INFO)root : *************************************************************
+[2017-11-11 16:43:07,014](INFO)root : &gt;&gt;&gt;获取元素：com.henji.yunyi.yizhibang:id/et_login_phone
+[2017-11-11 16:43:08,824](INFO)root : &gt;&gt;&gt;获取元素：com.henji.yunyi.yizhibang:id/et_login_password
+[2017-11-11 16:43:10,788](INFO)root : &gt;&gt;&gt;定位控件com.henji.yunyi.yizhibang:id/et_login_phone,输入内容为：13590283+-*
+[2017-11-11 16:43:11,467](INFO)root : &gt;&gt;&gt;定位控件com.henji.yunyi.yizhibang:id/et_login_password,输入内容为：123478
+[2017-11-11 16:43:12,579](INFO)root : &gt;&gt;&gt;点击控件获取：com.henji.yunyi.yizhibang:id/btn_login_submit
+
+
+        </pre>
+    </div>
+    <!--css div popup end-->
+
+    </td>
+    <td colspan='1' align='center'>
+No Case Detail
+</td>
+</tr>
+
+<tr id='Pt1.8' class='hiddenRow'>
+    <td class='passCase'><div class='testcase'>test08: 输入正确手机号码，正确密码</div></td>
+    <td colspan='4' align='center'>
+
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_Pt1.8')" >
+        pass</a>
+
+    <div id='div_Pt1.8' class="popup_window">
+        <div style='text-align: right; color:red;cursor:pointer'>
+        <a onfocus='this.blur();' onclick="document.getElementById('div_Pt1.8').style.display = 'none' " >
+           [x]</a>
+        </div>
+        <pre>
+        
+Pt1.8: [2017-11-11 16:43:46,636](INFO)root : *************************************************************
+[2017-11-11 16:43:46,636](INFO)root : &gt;&gt;&gt;获取元素：com.henji.yunyi.yizhibang:id/et_login_phone
+[2017-11-11 16:43:48,453](INFO)root : &gt;&gt;&gt;获取元素：com.henji.yunyi.yizhibang:id/et_login_password
+[2017-11-11 16:43:50,361](INFO)root : &gt;&gt;&gt;定位控件com.henji.yunyi.yizhibang:id/et_login_phone,输入内容为：13590283182
+[2017-11-11 16:43:51,042](INFO)root : &gt;&gt;&gt;定位控件com.henji.yunyi.yizhibang:id/et_login_password,输入内容为：123456
+[2017-11-11 16:43:51,743](INFO)root : &gt;&gt;&gt;点击控件获取：com.henji.yunyi.yizhibang:id/btn_login_submit
+[2017-11-11 16:44:06,021](INFO)root : 开始退出app
+[2017-11-11 16:44:06,085](INFO)root : 获取到“我”控件元素
+[2017-11-11 16:44:17,097](INFO)root : 点击“我”之后，未获取到“换一批”元素控件——页面已经跳转
+[2017-11-11 16:44:17,717](INFO)root : 点击“设置”
+[2017-11-11 16:44:19,027](INFO)root : 点击"退出登录"
+
+
+        </pre>
+    </div>
+    <!--css div popup end-->
+
+    </td>
+    <td colspan='1' align='center'>
+No Case Detail
+</td>
+</tr>
+
+<tr class='passClass'>
+    <td>test_case002_banner.Test_banner</td>
+    <td>5</td>
+    <td>5</td>
+    <td>0</td>
+    <td>0</td>
+    <td><a href="javascript:showClassDetail('c2',5)">Detail</a></td>
+</tr>
+
+<tr id='Pt2.1' class='hiddenRow'>
+    <td class='passCase'><div class='testcase'>test_01: 验证首页轮播图标识个数</div></td>
+    <td colspan='4' align='center'>
+
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_Pt2.1')" >
+        pass</a>
+
+    <div id='div_Pt2.1' class="popup_window">
+        <div style='text-align: right; color:red;cursor:pointer'>
+        <a onfocus='this.blur();' onclick="document.getElementById('div_Pt2.1').style.display = 'none' " >
+           [x]</a>
+        </div>
+        <pre>
+        
+Pt2.1: [2017-11-11 16:44:52,598](INFO)root : *****************************************************
+[2017-11-11 16:44:52,598](INFO)root : &gt;&gt;&gt;获取元素：com.henji.yunyi.yizhibang:id/et_login_phone
+[2017-11-11 16:44:54,355](INFO)root : &gt;&gt;&gt;获取元素：com.henji.yunyi.yizhibang:id/et_login_password
+[2017-11-11 16:44:56,311](INFO)root : 初始化登录框完成
+[2017-11-11 16:44:57,002](INFO)root : 输入账号为13590283182
+[2017-11-11 16:44:58,228](INFO)root : 输入密码为123456
+[2017-11-11 16:44:58,811](INFO)root : 点击登录按钮
+[2017-11-11 16:45:01,299](INFO)root : 获取轮播图个数标识符为3
+[2017-11-11 16:45:01,300](INFO)root : 判定轮播图个数为3个，符合预期
+[2017-11-11 16:45:12,222](INFO)root : 开始退出app
+[2017-11-11 16:45:12,286](INFO)root : 获取到“我”控件元素
+[2017-11-11 16:45:23,094](INFO)root : 点击“我”之后，未获取到“换一批”元素控件——页面已经跳转
+[2017-11-11 16:45:23,507](INFO)root : 点击“设置”
+[2017-11-11 16:45:24,876](INFO)root : 点击"退出登录"
+
+
+        </pre>
+    </div>
+    <!--css div popup end-->
+
+    </td>
+    <td colspan='1' align='center'>
+No Case Detail
+</td>
+</tr>
+
+<tr id='Pt2.2' class='hiddenRow'>
+    <td class='passCase'><div class='testcase'>test_02: 验证轮播图1页面跳转</div></td>
+    <td colspan='4' align='center'>
+
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_Pt2.2')" >
+        pass</a>
+
+    <div id='div_Pt2.2' class="popup_window">
+        <div style='text-align: right; color:red;cursor:pointer'>
+        <a onfocus='this.blur();' onclick="document.getElementById('div_Pt2.2').style.display = 'none' " >
+           [x]</a>
+        </div>
+        <pre>
+        
+Pt2.2: [2017-11-11 16:45:57,999](INFO)root : *****************************************************
+[2017-11-11 16:45:58,000](INFO)root : &gt;&gt;&gt;获取元素：com.henji.yunyi.yizhibang:id/et_login_phone
+[2017-11-11 16:45:59,791](INFO)root : &gt;&gt;&gt;获取元素：com.henji.yunyi.yizhibang:id/et_login_password
+[2017-11-11 16:46:01,703](INFO)root : 初始化登录框完成
+[2017-11-11 16:46:02,360](INFO)root : 输入账号为13590283182
+[2017-11-11 16:46:03,574](INFO)root : 输入密码为123456
+[2017-11-11 16:46:04,154](INFO)root : 点击登录按钮
+[2017-11-11 16:46:06,791](INFO)root : 点击第一张轮播图进入内页面
+[2017-11-11 16:46:17,036](INFO)root : 检测到title为：易直帮2.0版本介绍
+[2017-11-11 16:46:17,128](INFO)root : 获取内页顶部text为：易直帮2.0版本介绍
+[2017-11-11 16:46:27,241](INFO)root : 视频正常播放
+[2017-11-11 16:46:28,313](INFO)root : 获取到返回按钮，点击返回
+[2017-11-11 16:46:38,837](INFO)root : 开始退出app
+[2017-11-11 16:46:38,922](INFO)root : 获取到“我”控件元素
+[2017-11-11 16:46:50,098](INFO)root : 点击“我”之后，未获取到“换一批”元素控件——页面已经跳转
+[2017-11-11 16:46:50,580](INFO)root : 点击“设置”
+[2017-11-11 16:46:51,980](INFO)root : 点击"退出登录"
+
+
+        </pre>
+    </div>
+    <!--css div popup end-->
+
+    </td>
+    <td colspan='1' align='center'>
+No Case Detail
+</td>
+</tr>
+
+<tr id='Pt2.3' class='hiddenRow'>
+    <td class='passCase'><div class='testcase'>test_03: 验证轮播图2页面跳转</div></td>
+    <td colspan='4' align='center'>
+
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_Pt2.3')" >
+        pass</a>
+
+    <div id='div_Pt2.3' class="popup_window">
+        <div style='text-align: right; color:red;cursor:pointer'>
+        <a onfocus='this.blur();' onclick="document.getElementById('div_Pt2.3').style.display = 'none' " >
+           [x]</a>
+        </div>
+        <pre>
+        
+Pt2.3: [2017-11-11 16:47:25,592](INFO)root : *****************************************************
+[2017-11-11 16:47:25,592](INFO)root : &gt;&gt;&gt;获取元素：com.henji.yunyi.yizhibang:id/et_login_phone
+[2017-11-11 16:47:27,323](INFO)root : &gt;&gt;&gt;获取元素：com.henji.yunyi.yizhibang:id/et_login_password
+[2017-11-11 16:47:29,215](INFO)root : 初始化登录框完成
+[2017-11-11 16:47:29,863](INFO)root : 输入账号为13590283182
+[2017-11-11 16:47:31,099](INFO)root : 输入密码为123456
+[2017-11-11 16:47:31,689](INFO)root : 点击登录按钮
+[2017-11-11 16:47:36,983](INFO)root : 点击第二张轮播图进入内页面
+[2017-11-11 16:47:39,760](INFO)root : 成功获取到第二张轮播图的title
+[2017-11-11 16:47:39,902](INFO)root : 成功获取到第二张轮播图的底部“询底价”
+[2017-11-11 16:47:40,044](INFO)root : 成功获取到第二张轮播图的底部“联系方式”
+[2017-11-11 16:47:40,193](INFO)root : 第二张轮播图的顶部title为:【迈锐宝XL2017款 1.8L 全混动锐尊版报价】2017款 1.8L 全混动锐尊版图片_配置_广西桂海富达-汽车之家
+[2017-11-11 16:47:41,341](INFO)root : 获取到返回按钮，点击返回
+[2017-11-11 16:47:51,778](INFO)root : 开始退出app
+[2017-11-11 16:47:51,843](INFO)root : 获取到“我”控件元素
+[2017-11-11 16:48:02,498](INFO)root : 点击“我”之后，未获取到“换一批”元素控件——页面已经跳转
+[2017-11-11 16:48:02,908](INFO)root : 点击“设置”
+[2017-11-11 16:48:04,233](INFO)root : 点击"退出登录"
+
+
+        </pre>
+    </div>
+    <!--css div popup end-->
+
+    </td>
+    <td colspan='1' align='center'>
+No Case Detail
+</td>
+</tr>
+
+<tr id='Pt2.4' class='hiddenRow'>
+    <td class='passCase'><div class='testcase'>test_04: 验证轮播图3页面跳转</div></td>
+    <td colspan='4' align='center'>
+
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_Pt2.4')" >
+        pass</a>
+
+    <div id='div_Pt2.4' class="popup_window">
+        <div style='text-align: right; color:red;cursor:pointer'>
+        <a onfocus='this.blur();' onclick="document.getElementById('div_Pt2.4').style.display = 'none' " >
+           [x]</a>
+        </div>
+        <pre>
+        
+Pt2.4: [2017-11-11 16:48:37,870](INFO)root : *****************************************************
+[2017-11-11 16:48:37,871](INFO)root : &gt;&gt;&gt;获取元素：com.henji.yunyi.yizhibang:id/et_login_phone
+[2017-11-11 16:48:39,603](INFO)root : &gt;&gt;&gt;获取元素：com.henji.yunyi.yizhibang:id/et_login_password
+[2017-11-11 16:48:41,572](INFO)root : 初始化登录框完成
+[2017-11-11 16:48:42,633](INFO)root : 输入账号为13590283182
+[2017-11-11 16:48:43,862](INFO)root : 输入密码为123456
+[2017-11-11 16:48:44,427](INFO)root : 点击登录按钮
+[2017-11-11 16:48:50,081](INFO)root : 点击第二张轮播图进入内页面
+[2017-11-11 16:48:52,880](INFO)root : 成功获取第三张轮播图title：【丰田车型报价】南宁广缘丰田-汽车之家,页面跳转成功
+[2017-11-11 16:48:54,026](INFO)root : 获取到返回按钮，点击返回
+[2017-11-11 16:49:04,532](INFO)root : 开始退出app
+[2017-11-11 16:49:04,583](INFO)root : 获取到“我”控件元素
+[2017-11-11 16:49:16,237](INFO)root : 点击“我”之后，未获取到“换一批”元素控件——页面已经跳转
+[2017-11-11 16:49:16,718](INFO)root : 点击“设置”
+[2017-11-11 16:49:18,114](INFO)root : 点击"退出登录"
+
+
+        </pre>
+    </div>
+    <!--css div popup end-->
+
+    </td>
+    <td colspan='1' align='center'>
+No Case Detail
+</td>
+</tr>
+
+<tr id='Pt2.5' class='hiddenRow'>
+    <td class='passCase'><div class='testcase'>test_05: 验证第三章轮播图车型数量</div></td>
+    <td colspan='4' align='center'>
+
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_Pt2.5')" >
+        pass</a>
+
+    <div id='div_Pt2.5' class="popup_window">
+        <div style='text-align: right; color:red;cursor:pointer'>
+        <a onfocus='this.blur();' onclick="document.getElementById('div_Pt2.5').style.display = 'none' " >
+           [x]</a>
+        </div>
+        <pre>
+        
+Pt2.5: [2017-11-11 16:49:51,041](INFO)root : *****************************************************
+[2017-11-11 16:49:51,041](INFO)root : &gt;&gt;&gt;获取元素：com.henji.yunyi.yizhibang:id/et_login_phone
+[2017-11-11 16:49:52,722](INFO)root : &gt;&gt;&gt;获取元素：com.henji.yunyi.yizhibang:id/et_login_password
+[2017-11-11 16:49:54,645](INFO)root : 初始化登录框完成
+[2017-11-11 16:49:55,260](INFO)root : 输入账号为13590283182
+[2017-11-11 16:49:56,472](INFO)root : 输入密码为123456
+[2017-11-11 16:49:57,076](INFO)root : 点击登录按钮
+[2017-11-11 16:50:02,951](INFO)root : 点击第三张轮播图进入内页面
+[2017-11-11 16:50:09,199](INFO)root : 获取到返回按钮，点击返回
+[2017-11-11 16:50:19,787](INFO)root : 开始退出app
+[2017-11-11 16:50:19,845](INFO)root : 获取到“我”控件元素
+[2017-11-11 16:50:30,659](INFO)root : 点击“我”之后，未获取到“换一批”元素控件——页面已经跳转
+[2017-11-11 16:50:31,087](INFO)root : 点击“设置”
+[2017-11-11 16:50:32,448](INFO)root : 点击"退出登录"
+
+
+        </pre>
+    </div>
+    <!--css div popup end-->
+
+    </td>
+    <td colspan='1' align='center'>
+No Case Detail
+</td>
+</tr>
+
+<tr class='passClass'>
+    <td>test_case003_SmallNetWork.Test_banner</td>
+    <td>9</td>
+    <td>9</td>
+    <td>0</td>
+    <td>0</td>
+    <td><a href="javascript:showClassDetail('c3',9)">Detail</a></td>
+</tr>
+
+<tr id='Pt3.1' class='hiddenRow'>
+    <td class='passCase'><div class='testcase'>test01: 验证品牌微网页面正常跳转</div></td>
+    <td colspan='4' align='center'>
+
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_Pt3.1')" >
+        pass</a>
+
+    <div id='div_Pt3.1' class="popup_window">
+        <div style='text-align: right; color:red;cursor:pointer'>
+        <a onfocus='this.blur();' onclick="document.getElementById('div_Pt3.1').style.display = 'none' " >
+           [x]</a>
+        </div>
+        <pre>
+        
+Pt3.1: [2017-11-11 16:51:05,594](INFO)root : ****************************************
+[2017-11-11 16:51:05,594](INFO)root : &gt;&gt;&gt;获取元素：com.henji.yunyi.yizhibang:id/et_login_phone
+[2017-11-11 16:51:07,330](INFO)root : &gt;&gt;&gt;获取元素：com.henji.yunyi.yizhibang:id/et_login_password
+[2017-11-11 16:51:09,323](INFO)root : 初始化登录框完成
+[2017-11-11 16:51:09,994](INFO)root : 输入账号为13590283182
+[2017-11-11 16:51:11,224](INFO)root : 输入密码为123456
+[2017-11-11 16:51:11,796](INFO)root : 点击登录按钮
+[2017-11-11 16:51:14,348](INFO)root : &gt;&gt;&gt;获取元素：com.henji.yunyi.yizhibang:id/tv_title
+[2017-11-11 16:51:15,784](INFO)root : 获取品牌微网：‘关于我们’
+[2017-11-11 16:51:15,880](INFO)root : 获取品牌微网：‘产品中心’
+[2017-11-11 16:51:15,979](INFO)root : 获取品牌微网：‘新闻动态’
+[2017-11-11 16:51:16,087](INFO)root : 获取品牌微网：‘视频中心’
+[2017-11-11 16:51:16,189](INFO)root : 获取品牌微网：‘招商加盟’
+[2017-11-11 16:51:16,292](INFO)root : 获取品牌微网：‘联系我们’
+[2017-11-11 16:51:16,565](INFO)root : 获取 "易直帮号" 为:94715474 
+[2017-11-11 16:51:16,696](INFO)root : 获取品牌微网左下角阅读量阅读 9
+[2017-11-11 16:51:16,697](INFO)root : 获取品牌微网的title为：品牌微网
+[2017-11-11 16:51:17,807](INFO)root : 获取到返回按钮，点击返回
+[2017-11-11 16:51:27,995](INFO)root : 开始退出app
+[2017-11-11 16:51:28,066](INFO)root : 获取到“我”控件元素
+[2017-11-11 16:51:38,894](INFO)root : 点击“我”之后，未获取到“换一批”元素控件——页面已经跳转
+[2017-11-11 16:51:39,309](INFO)root : 点击“设置”
+[2017-11-11 16:51:40,668](INFO)root : 点击"退出登录"
+
+
+        </pre>
+    </div>
+    <!--css div popup end-->
+
+    </td>
+    <td colspan='1' align='center'>
+No Case Detail
+</td>
+</tr>
+
+<tr id='Pt3.2' class='hiddenRow'>
+    <td class='passCase'><div class='testcase'>test02: 验证品牌微网用户昵称修改</div></td>
+    <td colspan='4' align='center'>
+
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_Pt3.2')" >
+        pass</a>
+
+    <div id='div_Pt3.2' class="popup_window">
+        <div style='text-align: right; color:red;cursor:pointer'>
+        <a onfocus='this.blur();' onclick="document.getElementById('div_Pt3.2').style.display = 'none' " >
+           [x]</a>
+        </div>
+        <pre>
+        
+Pt3.2: [2017-11-11 16:52:13,534](INFO)root : ****************************************
+[2017-11-11 16:52:13,535](INFO)root : &gt;&gt;&gt;获取元素：com.henji.yunyi.yizhibang:id/et_login_phone
+[2017-11-11 16:52:15,289](INFO)root : &gt;&gt;&gt;获取元素：com.henji.yunyi.yizhibang:id/et_login_password
+[2017-11-11 16:52:17,188](INFO)root : 初始化登录框完成
+[2017-11-11 16:52:17,851](INFO)root : 输入账号为13590283182
+[2017-11-11 16:52:19,063](INFO)root : 输入密码为123456
+[2017-11-11 16:52:19,650](INFO)root : 点击登录按钮
+[2017-11-11 16:52:22,686](INFO)root : &gt;&gt;&gt;点击控件获取：com.henji.yunyi.yizhibang:id/mongolia_promotion_1_know_btn
+[2017-11-11 16:52:33,289](INFO)root : 获取到原来的用户昵称：冯凡11162431
+[2017-11-11 16:52:33,388](INFO)root : 进入信息编辑页面
+[2017-11-11 16:52:34,667](INFO)root : 点击编辑姓名
+[2017-11-11 16:52:34,667](INFO)root : &gt;&gt;&gt;定位控件com.henji.yunyi.yizhibang:id/et_dialog_input_content,输入内容为：冯凡11165234
+[2017-11-11 16:52:36,092](INFO)root : &gt;&gt;&gt;点击控件获取：com.henji.yunyi.yizhibang:id/btn_dialog_input_confirm
+[2017-11-11 16:52:37,641](INFO)root : 获取到toast：[&lt;appium.webdriver.webelement.WebElement (session="a200a056-5979-44da-b8a7-2a7a490835b1", element="5461da2f-2dbd-4dc0-a626-72adb959c5ae")&gt;]
+[2017-11-11 16:52:37,642](INFO)root : &gt;&gt;&gt;点击控件获取：com.henji.yunyi.yizhibang:id/tv_back
+[2017-11-11 16:52:37,747](INFO)root : 点击“返回”回到品牌微网首页
+[2017-11-11 16:52:38,772](INFO)root : 初始昵称为：冯凡11162431，输入更改的昵称为：冯凡11165234，输入完成之后首页展示的昵称为:冯凡11165234
+[2017-11-11 16:52:39,872](INFO)root : 获取到返回按钮，点击返回
+[2017-11-11 16:52:50,530](INFO)root : 开始退出app
+[2017-11-11 16:52:50,602](INFO)root : 获取到“我”控件元素
+[2017-11-11 16:53:01,640](INFO)root : 点击“我”之后，未获取到“换一批”元素控件——页面已经跳转
+[2017-11-11 16:53:02,122](INFO)root : 点击“设置”
+[2017-11-11 16:53:03,453](INFO)root : 点击"退出登录"
+
+
+        </pre>
+    </div>
+    <!--css div popup end-->
+
+    </td>
+    <td colspan='1' align='center'>
+No Case Detail
+</td>
+</tr>
+
+<tr id='Pt3.3' class='hiddenRow'>
+    <td class='passCase'><div class='testcase'>test03: 验证公司名称更改</div></td>
+    <td colspan='4' align='center'>
+
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_Pt3.3')" >
+        pass</a>
+
+    <div id='div_Pt3.3' class="popup_window">
+        <div style='text-align: right; color:red;cursor:pointer'>
+        <a onfocus='this.blur();' onclick="document.getElementById('div_Pt3.3').style.display = 'none' " >
+           [x]</a>
+        </div>
+        <pre>
+        
+Pt3.3: [2017-11-11 16:53:36,971](INFO)root : ****************************************
+[2017-11-11 16:53:36,972](INFO)root : &gt;&gt;&gt;获取元素：com.henji.yunyi.yizhibang:id/et_login_phone
+[2017-11-11 16:53:38,720](INFO)root : &gt;&gt;&gt;获取元素：com.henji.yunyi.yizhibang:id/et_login_password
+[2017-11-11 16:53:40,611](INFO)root : 初始化登录框完成
+[2017-11-11 16:53:41,247](INFO)root : 输入账号为13590283182
+[2017-11-11 16:53:42,620](INFO)root : 输入密码为123456
+[2017-11-11 16:53:43,208](INFO)root : 点击登录按钮
+[2017-11-11 16:53:45,734](INFO)root : &gt;&gt;&gt;点击控件获取：com.henji.yunyi.yizhibang:id/mongolia_promotion_1_know_btn
+[2017-11-11 16:53:56,282](INFO)root : 未获取到“我知道啦”
+[2017-11-11 16:54:06,507](INFO)root : 获取到原来的公司名称：公司名称为空
+[2017-11-11 16:54:06,590](INFO)root : 进入信息编辑页面
+[2017-11-11 16:54:07,858](INFO)root : 点击编辑公司名称
+[2017-11-11 16:54:07,859](INFO)root : &gt;&gt;&gt;定位控件com.henji.yunyi.yizhibang:id/et_dialog_input_content,输入内容为：云易恒基11165407
+[2017-11-11 16:54:09,160](INFO)root : &gt;&gt;&gt;点击控件获取：com.henji.yunyi.yizhibang:id/btn_dialog_input_confirm
+[2017-11-11 16:54:10,503](INFO)root : 获取到toast：[&lt;appium.webdriver.webelement.WebElement (session="65d65b0c-9fbc-4748-9727-6e5d55c9b7bb", element="0d37a6b9-4e38-4773-b283-d1fd3e9bfaa7")&gt;]
+[2017-11-11 16:54:10,504](INFO)root : &gt;&gt;&gt;点击控件获取：com.henji.yunyi.yizhibang:id/tv_back
+[2017-11-11 16:54:10,603](INFO)root : 点击“返回”回到品牌微网首页
+[2017-11-11 16:54:11,630](INFO)root : 初始昵称为：公司名称为空，输入更改的昵称为：云易恒基11165407，输入完成之后首页展示的昵称为:云易恒基11165407
+[2017-11-11 16:54:12,757](INFO)root : 获取到返回按钮，点击返回
+[2017-11-11 16:54:23,296](INFO)root : 开始退出app
+[2017-11-11 16:54:23,361](INFO)root : 获取到“我”控件元素
+[2017-11-11 16:54:34,179](INFO)root : 点击“我”之后，未获取到“换一批”元素控件——页面已经跳转
+[2017-11-11 16:54:34,621](INFO)root : 点击“设置”
+[2017-11-11 16:54:35,917](INFO)root : 点击"退出登录"
+
+
+        </pre>
+    </div>
+    <!--css div popup end-->
+
+    </td>
+    <td colspan='1' align='center'>
+No Case Detail
+</td>
+</tr>
+
+<tr id='Pt3.4' class='hiddenRow'>
+    <td class='passCase'><div class='testcase'>test04: 验证职务更改</div></td>
+    <td colspan='4' align='center'>
+
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_Pt3.4')" >
+        pass</a>
+
+    <div id='div_Pt3.4' class="popup_window">
+        <div style='text-align: right; color:red;cursor:pointer'>
+        <a onfocus='this.blur();' onclick="document.getElementById('div_Pt3.4').style.display = 'none' " >
+           [x]</a>
+        </div>
+        <pre>
+        
+Pt3.4: [2017-11-11 16:55:08,849](INFO)root : ****************************************
+[2017-11-11 16:55:08,850](INFO)root : &gt;&gt;&gt;获取元素：com.henji.yunyi.yizhibang:id/et_login_phone
+[2017-11-11 16:55:10,544](INFO)root : &gt;&gt;&gt;获取元素：com.henji.yunyi.yizhibang:id/et_login_password
+[2017-11-11 16:55:12,450](INFO)root : 初始化登录框完成
+[2017-11-11 16:55:13,082](INFO)root : 输入账号为13590283182
+[2017-11-11 16:55:14,309](INFO)root : 输入密码为123456
+[2017-11-11 16:55:14,854](INFO)root : 点击登录按钮
+[2017-11-11 16:55:18,423](INFO)root : &gt;&gt;&gt;点击控件获取：com.henji.yunyi.yizhibang:id/mongolia_promotion_1_know_btn
+[2017-11-11 16:55:28,818](INFO)root : 未获取到“我知道啦”
+[2017-11-11 16:55:28,921](INFO)root : 获取到原来的职务：测试11162725
+[2017-11-11 16:55:29,036](INFO)root : 进入信息编辑页面
+[2017-11-11 16:55:30,321](INFO)root : 点击编辑公司名称
+[2017-11-11 16:55:30,322](INFO)root : &gt;&gt;&gt;定位控件com.henji.yunyi.yizhibang:id/et_dialog_input_content,输入内容为：测试11165530
+[2017-11-11 16:55:31,635](INFO)root : &gt;&gt;&gt;点击控件获取：com.henji.yunyi.yizhibang:id/btn_dialog_input_confirm
+[2017-11-11 16:55:32,932](INFO)root : 获取到toast：[&lt;appium.webdriver.webelement.WebElement (session="cb9a1f09-8efb-4b0f-b438-21db765971b9", element="648eeaf7-0b2c-42cd-a55b-87b495061420")&gt;]
+[2017-11-11 16:55:32,932](INFO)root : &gt;&gt;&gt;点击控件获取：com.henji.yunyi.yizhibang:id/tv_back
+[2017-11-11 16:55:32,998](INFO)root : 点击“返回”回到品牌微网首页
+[2017-11-11 16:55:34,013](INFO)root : 初始昵称为：测试11162725，输入更改的昵称为：测试11165530，输入完成之后首页展示的昵称为测试11165530
+[2017-11-11 16:55:35,114](INFO)root : 获取到返回按钮，点击返回
+[2017-11-11 16:55:45,470](INFO)root : 开始退出app
+[2017-11-11 16:55:45,536](INFO)root : 获取到“我”控件元素
+[2017-11-11 16:55:56,468](INFO)root : 点击“我”之后，未获取到“换一批”元素控件——页面已经跳转
+[2017-11-11 16:55:56,919](INFO)root : 点击“设置”
+[2017-11-11 16:55:58,194](INFO)root : 点击"退出登录"
+
+
+        </pre>
+    </div>
+    <!--css div popup end-->
+
+    </td>
+    <td colspan='1' align='center'>
+No Case Detail
+</td>
+</tr>
+
+<tr id='Pt3.5' class='hiddenRow'>
+    <td class='passCase'><div class='testcase'>test05: 验证电话号码输入</div></td>
+    <td colspan='4' align='center'>
+
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_Pt3.5')" >
+        pass</a>
+
+    <div id='div_Pt3.5' class="popup_window">
+        <div style='text-align: right; color:red;cursor:pointer'>
+        <a onfocus='this.blur();' onclick="document.getElementById('div_Pt3.5').style.display = 'none' " >
+           [x]</a>
+        </div>
+        <pre>
+        
+Pt3.5: [2017-11-11 16:56:30,955](INFO)root : ****************************************
+[2017-11-11 16:56:30,956](INFO)root : &gt;&gt;&gt;获取元素：com.henji.yunyi.yizhibang:id/et_login_phone
+[2017-11-11 16:56:32,617](INFO)root : &gt;&gt;&gt;获取元素：com.henji.yunyi.yizhibang:id/et_login_password
+[2017-11-11 16:56:34,556](INFO)root : 初始化登录框完成
+[2017-11-11 16:56:35,199](INFO)root : 输入账号为13590283182
+[2017-11-11 16:56:36,388](INFO)root : 输入密码为123456
+[2017-11-11 16:56:36,973](INFO)root : 点击登录按钮
+[2017-11-11 16:56:39,644](INFO)root : &gt;&gt;&gt;点击控件获取：com.henji.yunyi.yizhibang:id/mongolia_promotion_1_know_btn
+[2017-11-11 16:56:49,725](INFO)root : 未获取到“我知道啦”
+[2017-11-11 16:56:49,789](INFO)root : 进入信息编辑页面
+[2017-11-11 16:56:51,023](INFO)root : 获取到原来的tel：13511162849
+[2017-11-11 16:56:51,208](INFO)root : 点击电话，进入修改tel页面
+[2017-11-11 16:56:53,667](INFO)root : &gt;&gt;&gt;定位控件com.henji.yunyi.yizhibang:id/et_dialog_input_content,输入内容为：13511165653
+[2017-11-11 16:56:54,698](INFO)root : 输入的账号为：13511165653
+[2017-11-11 16:56:54,699](INFO)root : &gt;&gt;&gt;点击控件获取：com.henji.yunyi.yizhibang:id/btn_dialog_input_confirm
+[2017-11-11 16:56:56,154](INFO)root : 获取到toast：[&lt;appium.webdriver.webelement.WebElement (session="d14418ff-41c9-449c-a813-e7563da4f142", element="a4c00f21-06b2-4de6-b939-8df0a2aa5043")&gt;]
+[2017-11-11 16:56:56,313](INFO)root : 初始tel：13511162849，输入tel：13511165653，显示的tel：13511165653
+[2017-11-11 16:56:57,392](INFO)root : 获取到返回按钮，点击返回
+[2017-11-11 16:56:58,508](INFO)root : 获取到返回按钮，点击返回
+[2017-11-11 16:57:10,684](INFO)root : 开始退出app
+[2017-11-11 16:57:10,755](INFO)root : 获取到“我”控件元素
+[2017-11-11 16:57:21,391](INFO)root : 点击“我”之后，未获取到“换一批”元素控件——页面已经跳转
+[2017-11-11 16:57:21,751](INFO)root : 点击“设置”
+[2017-11-11 16:57:23,071](INFO)root : 点击"退出登录"
+
+
+        </pre>
+    </div>
+    <!--css div popup end-->
+
+    </td>
+    <td colspan='1' align='center'>
+No Case Detail
+</td>
+</tr>
+
+<tr id='Pt3.6' class='hiddenRow'>
+    <td class='passCase'><div class='testcase'>test07: 微信二维码</div></td>
+    <td colspan='4' align='center'>
+
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_Pt3.6')" >
+        pass</a>
+
+    <div id='div_Pt3.6' class="popup_window">
+        <div style='text-align: right; color:red;cursor:pointer'>
+        <a onfocus='this.blur();' onclick="document.getElementById('div_Pt3.6').style.display = 'none' " >
+           [x]</a>
+        </div>
+        <pre>
+        
+Pt3.6: [2017-11-11 16:57:55,761](INFO)root : ****************************************
+[2017-11-11 16:57:55,762](INFO)root : &gt;&gt;&gt;获取元素：com.henji.yunyi.yizhibang:id/et_login_phone
+[2017-11-11 16:57:57,552](INFO)root : &gt;&gt;&gt;获取元素：com.henji.yunyi.yizhibang:id/et_login_password
+[2017-11-11 16:57:59,404](INFO)root : 初始化登录框完成
+[2017-11-11 16:58:00,076](INFO)root : 输入账号为13590283182
+[2017-11-11 16:58:01,303](INFO)root : 输入密码为123456
+[2017-11-11 16:58:01,886](INFO)root : 点击登录按钮
+[2017-11-11 16:58:04,418](INFO)root : &gt;&gt;&gt;点击控件获取：com.henji.yunyi.yizhibang:id/mongolia_promotion_1_know_btn
+[2017-11-11 16:58:14,970](INFO)root : 未获取到“我知道啦”
+[2017-11-11 16:58:15,065](INFO)root : 进入信息编辑页面
+[2017-11-11 16:58:15,065](INFO)root : &gt;&gt;&gt;点击控件获取：com.henji.yunyi.yizhibang:id/rl_brand_index_qr_code_container
+[2017-11-11 16:58:20,125](INFO)root : &gt;&gt;&gt;点击控件获取：com.miui.gallery:id/ok
+[2017-11-11 16:58:21,506](INFO)root : 获取到toast：[&lt;appium.webdriver.webelement.WebElement (session="885556ba-bc3e-4252-ba27-03a10f0cc7fd", element="b64fd43f-5779-4a70-8cf2-b68e6f4cb29e")&gt;]
+[2017-11-11 16:58:22,576](INFO)root : 获取到返回按钮，点击返回
+[2017-11-11 16:58:23,688](INFO)root : 获取到返回按钮，点击返回
+[2017-11-11 16:58:35,439](INFO)root : 开始退出app
+[2017-11-11 16:58:35,488](INFO)root : 获取到“我”控件元素
+[2017-11-11 16:58:46,160](INFO)root : 点击“我”之后，未获取到“换一批”元素控件——页面已经跳转
+[2017-11-11 16:58:46,607](INFO)root : 点击“设置”
+[2017-11-11 16:58:47,984](INFO)root : 点击"退出登录"
+
+
+        </pre>
+    </div>
+    <!--css div popup end-->
+
+    </td>
+    <td colspan='1' align='center'>
+No Case Detail
+</td>
+</tr>
+
+<tr id='Pt3.7' class='hiddenRow'>
+    <td class='passCase'><div class='testcase'>test08: 预览模块，验证码个人信息是否与主页面一致</div></td>
+    <td colspan='4' align='center'>
+
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_Pt3.7')" >
+        pass</a>
+
+    <div id='div_Pt3.7' class="popup_window">
+        <div style='text-align: right; color:red;cursor:pointer'>
+        <a onfocus='this.blur();' onclick="document.getElementById('div_Pt3.7').style.display = 'none' " >
+           [x]</a>
+        </div>
+        <pre>
+        
+Pt3.7: [2017-11-11 16:59:21,026](INFO)root : ****************************************
+[2017-11-11 16:59:21,027](INFO)root : &gt;&gt;&gt;获取元素：com.henji.yunyi.yizhibang:id/et_login_phone
+[2017-11-11 16:59:22,774](INFO)root : &gt;&gt;&gt;获取元素：com.henji.yunyi.yizhibang:id/et_login_password
+[2017-11-11 16:59:24,719](INFO)root : 初始化登录框完成
+[2017-11-11 16:59:25,362](INFO)root : 输入账号为13590283182
+[2017-11-11 16:59:26,608](INFO)root : 输入密码为123456
+[2017-11-11 16:59:27,164](INFO)root : 点击登录按钮
+[2017-11-11 16:59:31,055](INFO)root : 获取姓名为：冯凡11165234
+[2017-11-11 16:59:31,140](INFO)root : 获取易直帮号为：94715474
+[2017-11-11 16:59:31,219](INFO)root : 获取职务为：测试11165530
+[2017-11-11 16:59:31,321](INFO)root : 获取公司名称为：云易恒基11165407
+[2017-11-11 16:59:34,456](INFO)root : &gt;&gt;&gt;点击控件获取：com.henji.yunyi.yizhibang:id/tv_preview_brand_back
+[2017-11-11 16:59:34,543](INFO)root : 预览页面获取到用户昵称:冯凡11165234、易直帮号:94715474、所属职务:测试11165530、公司名称云易恒基11165407、且与主页面一致！
+[2017-11-11 16:59:36,594](INFO)root : 获取到返回按钮，点击返回
+[2017-11-11 16:59:47,051](INFO)root : 开始退出app
+[2017-11-11 16:59:47,120](INFO)root : 获取到“我”控件元素
+[2017-11-11 16:59:57,799](INFO)root : 点击“我”之后，未获取到“换一批”元素控件——页面已经跳转
+[2017-11-11 16:59:58,192](INFO)root : 点击“设置”
+[2017-11-11 16:59:59,506](INFO)root : 点击"退出登录"
+
+
+        </pre>
+    </div>
+    <!--css div popup end-->
+
+    </td>
+    <td colspan='1' align='center'>
+No Case Detail
+</td>
+</tr>
+
+<tr id='Pt3.8' class='hiddenRow'>
+    <td class='passCase'><div class='testcase'>test09: 获取六个栏目内容是否存在以及加载</div></td>
+    <td colspan='4' align='center'>
+
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_Pt3.8')" >
+        pass</a>
+
+    <div id='div_Pt3.8' class="popup_window">
+        <div style='text-align: right; color:red;cursor:pointer'>
+        <a onfocus='this.blur();' onclick="document.getElementById('div_Pt3.8').style.display = 'none' " >
+           [x]</a>
+        </div>
+        <pre>
+        
+Pt3.8: [2017-11-11 17:00:32,346](INFO)root : ****************************************
+[2017-11-11 17:00:32,347](INFO)root : &gt;&gt;&gt;获取元素：com.henji.yunyi.yizhibang:id/et_login_phone
+[2017-11-11 17:00:34,062](INFO)root : &gt;&gt;&gt;获取元素：com.henji.yunyi.yizhibang:id/et_login_password
+[2017-11-11 17:00:36,006](INFO)root : 初始化登录框完成
+[2017-11-11 17:00:36,652](INFO)root : 输入账号为13590283182
+[2017-11-11 17:00:37,866](INFO)root : 输入密码为123456
+[2017-11-11 17:00:38,475](INFO)root : 点击登录按钮
+[2017-11-11 17:00:44,591](INFO)root : 获取到"关于我们"
+[2017-11-11 17:00:44,729](INFO)root : 获取到“产品中心”
+[2017-11-11 17:00:44,879](INFO)root : 获取到“新闻动态”
+[2017-11-11 17:00:44,980](INFO)root : 获取到“视频中心”
+[2017-11-11 17:00:45,069](INFO)root : 获取到“招商加盟”
+[2017-11-11 17:00:45,153](INFO)root : 获取到“关于我们”
+[2017-11-11 17:00:45,153](INFO)root : &gt;&gt;&gt;点击控件获取：com.henji.yunyi.yizhibang:id/tv_preview_brand_back
+[2017-11-11 17:00:47,270](INFO)root : 获取到返回按钮，点击返回
+[2017-11-11 17:00:57,623](INFO)root : 开始退出app
+[2017-11-11 17:00:57,709](INFO)root : 获取到“我”控件元素
+[2017-11-11 17:01:08,371](INFO)root : 点击“我”之后，未获取到“换一批”元素控件——页面已经跳转
+[2017-11-11 17:01:08,803](INFO)root : 点击“设置”
+[2017-11-11 17:01:10,159](INFO)root : 点击"退出登录"
+
+
+        </pre>
+    </div>
+    <!--css div popup end-->
+
+    </td>
+    <td colspan='1' align='center'>
+No Case Detail
+</td>
+</tr>
+
+<tr id='Pt3.9' class='hiddenRow'>
+    <td class='passCase'><div class='testcase'>test10: 获取底部导航栏</div></td>
+    <td colspan='4' align='center'>
+
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_Pt3.9')" >
+        pass</a>
+
+    <div id='div_Pt3.9' class="popup_window">
+        <div style='text-align: right; color:red;cursor:pointer'>
+        <a onfocus='this.blur();' onclick="document.getElementById('div_Pt3.9').style.display = 'none' " >
+           [x]</a>
+        </div>
+        <pre>
+        
+Pt3.9: [2017-11-11 17:01:43,093](INFO)root : ****************************************
+[2017-11-11 17:01:43,093](INFO)root : &gt;&gt;&gt;获取元素：com.henji.yunyi.yizhibang:id/et_login_phone
+[2017-11-11 17:01:44,793](INFO)root : &gt;&gt;&gt;获取元素：com.henji.yunyi.yizhibang:id/et_login_password
+[2017-11-11 17:01:46,716](INFO)root : 初始化登录框完成
+[2017-11-11 17:01:47,341](INFO)root : 输入账号为13590283182
+[2017-11-11 17:01:48,571](INFO)root : 输入密码为123456
+[2017-11-11 17:01:49,151](INFO)root : 点击登录按钮
+[2017-11-11 17:01:55,547](INFO)root : &gt;&gt;&gt;点击控件获取：com.henji.yunyi.yizhibang:id/tv_preview_brand_back
+[2017-11-11 17:01:55,668](INFO)root : 成功获取到品牌微网预览页面，底部四个导航栏目
+[2017-11-11 17:01:57,759](INFO)root : 获取到返回按钮，点击返回
+[2017-11-11 17:02:08,336](INFO)root : 开始退出app
+[2017-11-11 17:02:08,391](INFO)root : 获取到“我”控件元素
+[2017-11-11 17:02:19,049](INFO)root : 点击“我”之后，未获取到“换一批”元素控件——页面已经跳转
+[2017-11-11 17:02:19,448](INFO)root : 点击“设置”
+[2017-11-11 17:02:20,808](INFO)root : 点击"退出登录"
+
+
+        </pre>
+    </div>
+    <!--css div popup end-->
+
+    </td>
+    <td colspan='1' align='center'>
+No Case Detail
+</td>
+</tr>
+
+<tr class='errorClass'>
+    <td>test_ceshi.Blood</td>
+    <td>1</td>
+    <td>0</td>
+    <td>0</td>
+    <td>1</td>
+    <td><a href="javascript:showClassDetail('c4',1)">Detail</a></td>
+</tr>
+
+<tr id='Et4.1' class='none'>
+    <td class='errorCase'><div class='testcase'>test_03: 验证轮播图2页面跳转</div></td>
+    <td colspan='4' align='center'>
+
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_Et4.1')" >
+        error</a>
+
+    <div id='div_Et4.1' class="popup_window">
+        <div style='text-align: right; color:red;cursor:pointer'>
+        <a onfocus='this.blur();' onclick="document.getElementById('div_Et4.1').style.display = 'none' " >
+           [x]</a>
+        </div>
+        <pre>
+        
+Et4.1: Traceback (most recent call last):
+  File "C:\Users\Administrator\Desktop\python01\fengfan_unittest\feng_test_case\test_ceshi.py", line 19, in test_03
+    self.driver.find_element_by_xpath(r'//android.view.View[@content-desc={}]'.format(name))
+NameError: name 'name' is not defined
+
+
+        </pre>
+    </div>
+    <!--css div popup end-->
+
+    </td>
+    <td colspan='1' align='center'>
+No Case Detail
+</td>
+</tr>
+
+<tr id='total_row'>
+    <td>Total and Rate</td>
+    <td>23</td>
+    <td>22</td>
+    <td>0</td>
+    <td>1</td>
+    <td>Proportion:22/23</td>
+</tr>
+</table>
+
+<div id='ending'>&nbsp;</div>
+<div class="bg">
+                       <div class="panelBg"></div>  
+                       <div class="panel"> 
+                       <div id="section1"> 
+                           <div class="title">Pie Chart</div>  
+                           <div class="subTitle">This chart is to show the rate that statis of test cases</div> 
+                           <div class="piechart">   
+                               <canvas id="circle" width="225" height="168" onmousemove='javascript:drawCircle(22, 0, 1)'>your browser does not support the canvas tag</canvas>
+                           </div> 
+                           <div class="description">  
+                           <div class="scroll-item item-even">  
+                               <div class="rect" style="background-color: #6c6; "></div>  
+                               <div class="item-text">Passcase:22</div>  
+                           </div>  
+                           <div class="scroll-item item-odd">  
+                               <div class="rect" style="background-color: #c60; "></div>  
+                               <div class="item-text">failcase:0</div>  
+                           </div>   
+                           <div class="scroll-item item-even">  
+                               <div class="rect" style="background-color: #c00; "></div>  
+                               <div class="item-text">errorcase:1</div>  
+                           </div> 
+                           <div class="scroll-item item-odd">  
+                           </div> 
+                           <div class="scroll-item item-even">    
+                           </div> 
+                       </div> 
+
+                       </div>  
+                       <div id="section2">  
+                       <div class="title">Bar Chart</div>  
+                           <div class="subTitle">This chart is to show the count that statis of test cases</div> 
+                           <div class="barchart">   
+                               <canvas id="bar" width="225" height="168" onclick='javascript:drawBar(22, 0, 1)'>your browser does not support the canvas tag</canvas>
+                           </div> 
+                           <div class="description">  
+                           <div class="scroll-item item-even">  
+                               <div class="rect" style="background-color: #6c6; "></div>  
+                               <div class="item-text">Passcase:22</div>  
+                           </div>  
+                           <div class="scroll-item item-odd">  
+                               <div class="rect" style="background-color: #c60; "></div>  
+                               <div class="item-text">failcase:0</div>  
+                           </div>   
+                           <div class="scroll-item item-even">  
+                               <div class="rect" style="background-color: #c00; "></div>  
+                               <div class="item-text">errorcase:1</div>  
+                           </div> 
+                           <div class="scroll-item item-odd">  
+                           </div> 
+                           <div class="scroll-item item-even">    
+                           </div> 
+                       </div> 
+
+                       </div>  
+                       <div id="section3"> 
+                        <div class="title">Line Chart</div>  
+                           <div class="subTitle">This chart is to show the rate that data of test cases</div> 
+                           <div class="linechart">   
+                               <canvas id="line" width="225" height="168" onclick='javascript:drawline(22, 0, 1)'>your browser does not support the canvas tag</canvas>
+                           </div> 
+                           <div class="description">  
+                           <div class="scroll-item item-even">  
+                               <div class="rect" style="background-color: #6c6; "></div>  
+                               <div class="item-text">Passcase:22</div>  
+                           </div>  
+                           <div class="scroll-item item-odd">  
+                               <div class="rect" style="background-color: #c60; "></div>  
+                               <div class="item-text">failcase:0</div>  
+                           </div>   
+                           <div class="scroll-item item-even">  
+                               <div class="rect" style="background-color: #c00; "></div>  
+                               <div class="item-text">errorcase:1</div>  
+                           </div> 
+                           <div class="scroll-item item-odd">  
+                           </div> 
+                           <div class="scroll-item item-even">    
+                           </div> 
+                       </div> 
+
+                       </div>
+                       </div>
+                       <div class="panel1">
+                       <div id="section4">
+                           <a>22 Pass cases, 0 fail cases, 1 error cases.</a>
+                       </div>
+                       </div>
+                    </div>
+</body>
+</html>
+<script type="text/javascript"> 
+function drawCircle(pass, fail, error){ 
+    var color = ["#6c6","#c60","#c00"];  
+    var data = [pass,fail,error]; 
+    var canvas = document.getElementById("circle");  
+    var ctx = canvas.getContext("2d");  
+    var startPoint=0;  
+    for(var i=0;i<data.length;i++){  
+        ctx.fillStyle = color[i];  
+        ctx.beginPath();  
+        ctx.moveTo(112,84);   
+        ctx.arc(112,84,84,startPoint,startPoint+Math.PI*2*(data[i]/(data[0]+data[1]+data[2])),false);  
+        ctx.fill();  
+        startPoint += Math.PI*2*(data[i]/(data[0]+data[1]+data[2]));  
+    }  
+}
+
+function FillRect(cxt, x1, y1, width, height, color) {
+    cxt.fillStyle = color; 
+    cxt.fillRect(x1, y1, width, height);
+} 
+
+function drawBar(pass, fail, error){ 
+
+    var color = ["#6c6","#c60","#c00"];  
+    var data = [pass,fail,error];
+    var count = pass + fail + error;
+    var h =[10+(1 - pass/count)*148,10+(1 - fail/count)*148,10+(1 - error/count)*148];
+    var x = [30,90,150];
+    var y = [70,130,190];
+    var canvas = document.getElementById("bar");  
+    var ctx = canvas.getContext("2d");
+    DrawString(ctx, 'Count(c)', '', '', '', '', 15, 10)
+    DrawLine(ctx,5,15,10,10,'black');
+    DrawLine(ctx,15,15,10,10,'black');
+    DrawLine(ctx,10,10,10,158,'black');
+    DrawLine(ctx,10,158,215,158,'black');
+    DrawLine(ctx,210,153,215,158,'black');
+    DrawLine(ctx,210,163,215,158,'black');
+    DrawString(ctx, 'Type(c)', '', '', '', '', 180, 160)
+    for(var i=0;i<3;i++) {
+        DrawLine(ctx,x[i],h[i],x[i],158,color[i]);
+        DrawLine(ctx,x[i],h[i],y[i],h[i],color[i]);
+        DrawLine(ctx,y[i],h[i],y[i],158,color[i]); 
+        DrawLine(ctx,(y[i]+x[i])/2,153,(y[i]+x[i])/2,158,color[i]);
+        DrawString(ctx, data[i], '', color[i], '', '', (y[i]+x[i])/2, h[i]-15);
+        FillRect(ctx, x[i], h[i], 40, 158-h[i], color[i]);
+    }
+} 
+
+function DrawP(ctx, P) {
+    with (ctx) {
+        moveTo(P[0],P[1]);
+        lineTo(P[0]+1,P[1]+1);
+     }
+}
+
+function DrawLine(cxt, x1, y1, x2, y2, color) {
+
+    cxt.strokeStyle = color;
+    cxt.beginPath();
+    cxt.moveTo(x1, y1);
+    cxt.lineTo(x2, y2);
+    cxt.stroke();
+}
+
+function DrawString(cxt, text, font, color, align, v_align, x, y) {
+    if (font == "") {
+        cxt.font = "10px";
+    }
+    else {
+        cxt.font = font;
+    }
+    if (color == "") {
+        cxt.fillStyle = "#000000";
+    }
+    else {
+        cxt.fillStyle = color;
+    }
+    if (align == "") {
+        cxt.textAlign = "left";
+    }
+    else {
+        cxt.textAlign = align;
+    }
+    if (v_align == "") {
+        cxt.textBaseline = "top";
+    }
+    else {
+        cxt.textBaseline = v_align;
+    }
+    cxt.fillText(text, x, y);
+}
+
+function drawline(pass, fail, error){ 
+    var color = ["#6c6","#c60","#c00"];  
+    var data = [pass,fail,error];
+    var count = pass + fail + error;
+    var x = [30,90,150];
+    var y = [70,130,190];
+    var h =[10+(1 - pass/count)*148,10+(1 - fail/count)*148,10+(1 - error/count)*148];
+    var canvas = document.getElementById("line");  
+    var ctx = canvas.getContext("2d");
+    DrawString(ctx, 'Count(c)', '', '', '', '', 15, 10)
+    DrawLine(ctx,5,15,10,10,'black');
+    DrawLine(ctx,15,15,10,10,'black');
+    DrawLine(ctx,10,10,10,158,'black');
+    DrawLine(ctx,10,158,215,158,'black');
+    DrawLine(ctx,210,153,215,158,'black');
+    DrawLine(ctx,210,163,215,158,'black');
+    DrawString(ctx, 'Type(c)', '', '', '', '', 180, 160)
+    for(var i=0;i<3;i++) {
+        p = Array((y[i]+x[i])/2,h[i]);
+        DrawP(ctx,p);
+        DrawLine(ctx,(y[i]+x[i])/2,153,(y[i]+x[i])/2,158,color[i]);
+        DrawString(ctx, data[i], '', color[i], '', '', (y[i]+x[i])/2, h[i]-15);
+        if(i < 2) {
+        
+            DrawLine(ctx,(y[i]+x[i])/2,h[i],(y[i+1]+x[i+1])/2,h[i+1],'black');
+            
+        }
+        
+    }
+    
+} 
+
+</script>  

@@ -1,0 +1,2109 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>自动化测试报告</title>
+    <meta name="generator" content="HTMLTestRunner 0.8.2"/>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+    
+<style type="text/css" media="screen">
+body        { font-family: verdana, arial, helvetica, sans-serif; font-size: 80%; }
+table       { font-size: 100%; }
+pre         { }
+
+/* -- heading ---------------------------------------------------------------------- */
+h1 {
+    font-size: 16pt;
+    color: gray;
+}
+.heading {
+    margin-top: 0ex;
+    margin-bottom: 1ex;
+}
+
+.heading .attribute {
+    margin-top: 1ex;
+    margin-bottom: 0;
+}
+
+.button{  
+    border:1px solid #cccccc;  
+    cursor:pointer;  
+    margin:10px 5px;  
+    height:40px;  
+    text-align:center;  
+    border-radius: 4px;  
+    border-color: #636263 #464647 #A1A3A5;  
+    text-shadow: 0 1px 1px #F6F6F6;  
+    background-image: -moz-linear-gradient(center top, #D9D9D9, #A6A6A6 49%, #A6A6A6 50%);  
+    background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0, #D9D9D9),color-stop(1, #A6A6A6));  
+}  
+
+.buttonText{  
+    position:relative;  
+    font-weight:bold;  
+    top:10px;
+    color:#58595B;  
+}   
+
+.heading .description {
+    margin-top: 4ex;
+    margin-bottom: 6ex;
+}
+
+.panel .description{  
+    border:1px solid #CCCCCC;  
+    border-color: #636263 #464647 #A1A3A5;  
+    margin:10px 5px;  
+    height:165px;  
+    border-radius: 4px;  
+}  
+.scroll-item {  
+    position: relative;  
+    width: 100%;  
+    height: 32px;  
+    border-bottom:1px solid gray;  
+    cursor: pointer;  
+}  
+.item-even {  
+    background-color: #E7E8EC;  
+}  
+      
+.item-odd {  
+    background-color: #E0ECF6;  
+}  
+.rect {  
+    float: left;  
+    margin-top: 5px;  
+    margin-left: 5px;  
+    width: 20px;  
+    height: 20px;  
+    border-radius: 3px;  
+}  
+.item-text{  
+    margin-left: 5px;  
+    height: 100%;  
+    float: left;  
+    font-size: 14px;   
+    vertical-align: middle;  
+    display: inline-block;  
+    line-height: 30px;  
+}  
+
+.bg{  
+    position:absolute;  
+    height:97%;  
+    width:80%;  
+    overflow-x: hidden;  
+    overflow-y:hidden;  
+}  
+.panel{  
+    position:absolute;  
+    height:550px;  
+    width:750px;  
+    left:45px;  
+    top:45px;  
+    border-radius: 12px;  
+    background-image: -moz-linear-gradient(top,#EBEBEB, #BFBFBF);  
+    background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0, #EBEBEB),color-stop(1, #BFBFBF));  
+    }  
+.panel1{  
+    position:absolute;  
+    height:550px;  
+    width:200px;  
+    left:800px;  
+    top:45px;  
+    border-radius: 12px;  
+    background-image: -moz-linear-gradient(top,#EBEBEB, #BFBFBF);  
+    background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0, #EBEBEB),color-stop(1, #BFBFBF));  
+    } 
+.panelBg{  
+    position:absolute;  
+    height:600px;  
+    width:1000px;  
+    left:20px;  
+    top:20px;  
+    border-radius: 12px;  
+    background-color:#000000;  
+    opacity:0.5;  
+}  
+
+.title{  
+    border:1px solid green;  
+    position:relative;  
+    margin:5px;  
+    font-size:22px;  
+    font-weight:bold;  
+    text-align:center;  
+    color:#58595B;  
+} 
+
+.piechart{  
+    border:1px solid green;  
+    margin:5px;  
+    height:170px;  
+} 
+
+.barchart{  
+    border:1px solid green;  
+    margin:5px;  
+    height:170px;  
+}  
+
+.linechart{  
+    border:1px solid green;  
+    margin:5px;  
+    height:170px;  
+} 
+     
+.subTitle{  
+    border:1px solid green;  
+    margin:5px;   
+    font-size:14px;  
+    height:70px;  
+    font-weight:bold;  
+    text-indent:2em;  
+    color:#6D6E71;  
+}  
+
+/* -- css div popup ------------------------------------------------------------------------ */
+a.popup_link {
+}
+
+a.popup_link:hover {
+    color: red;
+}
+
+.popup_window {
+    display: none;
+    position: relative;
+    left: 0px;
+    top: 0px;
+    /*border: solid #627173 1px; */
+    padding: 10px;
+    background-color: #E6E6D6;
+    font-family: "Lucida Console", "Courier New", Courier, monospace;
+    text-align: left;
+    font-size: 8pt;
+    width: 500px;
+}
+
+}
+/* -- report ------------------------------------------------------------------------ */
+#show_detail_line {
+    margin-top: 3ex;
+    margin-bottom: 1ex;
+}
+#result_table {
+    width: 80%;
+    border-collapse: collapse;
+    border: 1px solid #777;
+}
+#header_row {
+    font-weight: bold;
+    color: white;
+    background-color: #777;
+}
+#result_table td {
+    border: 2px solid #777;
+    padding: 3px;
+}
+#total_row  { font-weight: bold; }
+.passClass  { background-color: #6c6; }
+.failClass  { background-color: #c60; }
+.errorClass { background-color: #c00; }
+.passCase   { color: #6c6; font-weight: bold;}
+.failCase   { color: #c60; font-weight: bold; }
+.errorCase  { color: #c00; font-weight: bold; }
+.hiddenRow  { display: none; }
+.testcase   { margin-left: 2em; }
+
+#section1{  
+    border:1px solid green;  
+    position:relative;  
+    float:left;  
+    width:235px;  
+    height:530px;  
+    top:10px;  
+    left:10px;  
+}  
+#section2{  
+    border:1px solid green;  
+    position:relative;  
+    float:left;  
+    width:235px;  
+    height:530px;  
+    top:10px;  
+    left:20px;  
+}  
+#section3{  
+    border:1px solid green;  
+    position:relative;  
+    float:left;  
+    width:235px;  
+    height:530px;  
+    top:10px;  
+    left:30px;  
+}  
+#section4{  
+    border:1px solid green;  
+    position:relative;  
+    float:left;  
+    width:180px;  
+    height:530px;  
+    top:10px;  
+    left:10px;  
+}  
+
+/* -- ending ---------------------------------------------------------------------- */
+#ending {
+}
+
+</style>
+
+</head>
+<body style="background-color:#C0C0C0" >
+<script language="javascript" type="text/javascript"><!--
+output_list = Array();
+
+/* level - 0:Summary; 1:Pass; 2:Fail; 3:Error; 4:All */
+function showCase(level) {
+    trs = document.getElementsByTagName("tr");
+    for (var i = 0; i < trs.length; i++) {
+        tr = trs[i];
+        id = tr.id;
+        if (id.substr(0,2) == 'Ft') {
+            if (level == 2) {
+                tr.className = '';
+            }
+            else if(level == 4) {
+                tr.className = '';
+            }
+            else if(level == 5) {
+                tr.className = '';
+            }
+            else{
+                tr.className = 'hiddenRow';
+            }
+        }
+        if (id.substr(0,2) == 'Pt') {
+            if (level == 1) {
+                tr.className = '';
+            }
+            else if(level == 4 ) {
+                tr.className = '';
+            }
+            else{
+                tr.className = 'hiddenRow';
+            }
+        }
+        if (id.substr(0,2) == 'Et') {
+            if (level == 3) {
+                tr.className = '';
+            }
+            else if(level == 4 ) {
+                tr.className = '';
+            }
+            else if(level == 5 ) {
+                tr.className = '';
+            }
+            else{
+                tr.className = 'hiddenRow';
+            }
+        }
+    }
+}
+
+function showClassDetail(cid, count) {
+    var id_list = Array(count);
+    var toHide = 1;
+    for (var i = 0; i < count; i++) {
+        tid0 = 't' + cid.substr(1) + '.' + (i+1);
+        tid = 'F' + tid0;
+        tr = document.getElementById(tid);
+        if (!tr) {
+            tid = 'P' + tid0;
+            tr = document.getElementById(tid);
+            if(!tr){
+                tid = 'E' + tid0;
+                tr = document.getElementById(tid);
+            }
+        }
+        id_list[i] = tid;
+        if (tr.className) {
+            toHide = 0;
+        }
+    }
+    for (var i = 0; i < count; i++) {
+        tid = id_list[i];
+        if (toHide) {
+            document.getElementById('div_'+tid).style.display = 'none'
+            document.getElementById(tid).className = 'hiddenRow';
+        }
+        else {
+            document.getElementById(tid).className = '';
+        }
+    }
+}
+
+
+function showTestDetail(div_id){
+    var details_div = document.getElementById(div_id)
+    var displayState = details_div.style.display
+    // alert(displayState)
+    if (displayState != 'block' ) {
+        displayState = 'block'
+        details_div.style.display = 'block'
+    }
+    else {
+        details_div.style.display = 'none'
+    }
+}
+
+
+function html_escape(s) {
+    s = s.replace(/&/g,'&amp;');
+    s = s.replace(/</g,'&lt;');
+    s = s.replace(/>/g,'&gt;');
+    return s;
+}
+
+/* obsoleted by detail in <div>
+function showOutput(id, name) {
+    var w = window.open("", //url
+                    name,
+                    "resizable,scrollbars,status,width=800,height=450");
+    d = w.document;
+    d.write("<pre>");
+    d.write(html_escape(output_list[id]));
+    d.write("\n");
+    d.write("<a href='javascript:window.close()'>close</a>\n");
+    d.write("</pre>\n");
+    d.close();
+}
+*/
+--></script>
+
+<div class='heading'>
+<h1>自动化测试报告</h1>
+<p class='attribute'><strong>Start Time:</strong> 2017-11-11 10:37:08</p>
+<p class='attribute'><strong>Duration:</strong> 0:32:02.039000</p>
+<p class='attribute'><strong>Status:</strong> Pass 15 Failure 3 Error 10</p>
+
+<p class='description'>用例执行情况：</p>
+</div>
+
+
+
+<p id='show_detail_line'>Show
+<a href='javascript:showCase(0)'>Summary</a>
+<a href='javascript:showCase(1)'>Pass</a>
+<a href='javascript:showCase(2)'>Fail</a>
+<a href='javascript:showCase(3)'>Error</a>
+<a href='javascript:showCase(5)'>Fail&Error</a>
+<a href='javascript:showCase(4)'>All</a>
+</p>
+<table id='result_table'>
+<colgroup>
+<col align='left' />
+<col align='right' />
+<col align='right' />
+<col align='right' />
+<col align='right' />
+<col align='right' />
+</colgroup>
+<tr id='header_row'>
+    <td>Test Group/Test case</td>
+    <td>Count</td>
+    <td>Pass</td>
+    <td>Fail</td>
+    <td>Error</td>
+    <td>CaseInfo</td>
+</tr>
+
+<tr class='passClass'>
+    <td>test_case001_Login.Test_login</td>
+    <td>8</td>
+    <td>8</td>
+    <td>0</td>
+    <td>0</td>
+    <td><a href="javascript:showClassDetail('c1',8)">Detail</a></td>
+</tr>
+
+<tr id='Pt1.1' class='hiddenRow'>
+    <td class='passCase'><div class='testcase'>test01: 验证账号为空，输入密码不可登陆</div></td>
+    <td colspan='4' align='center'>
+
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_Pt1.1')" >
+        pass</a>
+
+    <div id='div_Pt1.1' class="popup_window">
+        <div style='text-align: right; color:red;cursor:pointer'>
+        <a onfocus='this.blur();' onclick="document.getElementById('div_Pt1.1').style.display = 'none' " >
+           [x]</a>
+        </div>
+        <pre>
+        
+Pt1.1: [2017-11-11 10:38:04,979](INFO)root : *************************************************************
+[2017-11-11 10:38:04,980](INFO)root : &gt;&gt;&gt;点击控件获取：android:id/button1
+[2017-11-11 10:38:05,545](INFO)root : 获取点击授权“允许”
+[2017-11-11 10:38:08,708](INFO)root : &gt;&gt;&gt;点击控件获取：com.henji.yunyi.yizhibang:id/guide_bt_go
+[2017-11-11 10:38:08,926](INFO)root : &gt;&gt;&gt;获取元素：com.henji.yunyi.yizhibang:id/btn_login_submit
+[2017-11-11 10:38:10,145](INFO)root : 第一次开机引导页，成功跳过
+[2017-11-11 10:38:15,146](INFO)root : &gt;&gt;&gt;获取元素：com.henji.yunyi.yizhibang:id/et_login_phone
+[2017-11-11 10:38:17,057](INFO)root : &gt;&gt;&gt;定位控件com.henji.yunyi.yizhibang:id/et_login_password,输入内容为：123456
+[2017-11-11 10:38:17,730](INFO)root : 输入密码为123456
+[2017-11-11 10:38:17,730](INFO)root : &gt;&gt;&gt;点击控件获取：com.henji.yunyi.yizhibang:id/btn_login_submit
+
+
+        </pre>
+    </div>
+    <!--css div popup end-->
+
+    </td>
+    <td colspan='1' align='center'>
+No Case Detail
+</td>
+</tr>
+
+<tr id='Pt1.2' class='hiddenRow'>
+    <td class='passCase'><div class='testcase'>test02: 验证账号输入正确，密码为空</div></td>
+    <td colspan='4' align='center'>
+
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_Pt1.2')" >
+        pass</a>
+
+    <div id='div_Pt1.2' class="popup_window">
+        <div style='text-align: right; color:red;cursor:pointer'>
+        <a onfocus='this.blur();' onclick="document.getElementById('div_Pt1.2').style.display = 'none' " >
+           [x]</a>
+        </div>
+        <pre>
+        
+Pt1.2: [2017-11-11 10:38:51,154](INFO)root : *************************************************************
+[2017-11-11 10:38:51,154](INFO)root : &gt;&gt;&gt;获取元素：com.henji.yunyi.yizhibang:id/et_login_phone
+[2017-11-11 10:38:52,711](INFO)root : &gt;&gt;&gt;获取元素：com.henji.yunyi.yizhibang:id/et_login_password
+[2017-11-11 10:38:54,165](INFO)root : &gt;&gt;&gt;定位控件com.henji.yunyi.yizhibang:id/et_login_phone,输入内容为：13590283182
+[2017-11-11 10:38:54,801](INFO)root : &gt;&gt;&gt;点击控件获取：com.henji.yunyi.yizhibang:id/btn_login_submit
+
+
+        </pre>
+    </div>
+    <!--css div popup end-->
+
+    </td>
+    <td colspan='1' align='center'>
+No Case Detail
+</td>
+</tr>
+
+<tr id='Pt1.3' class='hiddenRow'>
+    <td class='passCase'><div class='testcase'>test03: 验证输入小于11账号,不输入密码</div></td>
+    <td colspan='4' align='center'>
+
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_Pt1.3')" >
+        pass</a>
+
+    <div id='div_Pt1.3' class="popup_window">
+        <div style='text-align: right; color:red;cursor:pointer'>
+        <a onfocus='this.blur();' onclick="document.getElementById('div_Pt1.3').style.display = 'none' " >
+           [x]</a>
+        </div>
+        <pre>
+        
+Pt1.3: [2017-11-11 10:39:29,266](INFO)root : *************************************************************
+[2017-11-11 10:39:29,266](INFO)root : &gt;&gt;&gt;获取元素：com.henji.yunyi.yizhibang:id/et_login_phone
+[2017-11-11 10:39:30,945](INFO)root : &gt;&gt;&gt;获取元素：com.henji.yunyi.yizhibang:id/et_login_password
+[2017-11-11 10:39:32,405](INFO)root : &gt;&gt;&gt;定位控件com.henji.yunyi.yizhibang:id/et_login_phone,输入内容为：1359028318
+[2017-11-11 10:39:33,033](INFO)root : &gt;&gt;&gt;点击控件获取：com.henji.yunyi.yizhibang:id/btn_login_submit
+
+
+        </pre>
+    </div>
+    <!--css div popup end-->
+
+    </td>
+    <td colspan='1' align='center'>
+No Case Detail
+</td>
+</tr>
+
+<tr id='Pt1.4' class='hiddenRow'>
+    <td class='passCase'><div class='testcase'>test04: 验证输入小于11账号，输入非正确密码</div></td>
+    <td colspan='4' align='center'>
+
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_Pt1.4')" >
+        pass</a>
+
+    <div id='div_Pt1.4' class="popup_window">
+        <div style='text-align: right; color:red;cursor:pointer'>
+        <a onfocus='this.blur();' onclick="document.getElementById('div_Pt1.4').style.display = 'none' " >
+           [x]</a>
+        </div>
+        <pre>
+        
+Pt1.4: [2017-11-11 10:40:06,657](INFO)root : *************************************************************
+[2017-11-11 10:40:06,658](INFO)root : &gt;&gt;&gt;获取元素：com.henji.yunyi.yizhibang:id/et_login_phone
+[2017-11-11 10:40:08,247](INFO)root : &gt;&gt;&gt;获取元素：com.henji.yunyi.yizhibang:id/et_login_password
+[2017-11-11 10:40:09,713](INFO)root : &gt;&gt;&gt;定位控件com.henji.yunyi.yizhibang:id/et_login_phone,输入内容为：1359028318
+[2017-11-11 10:40:10,371](INFO)root : &gt;&gt;&gt;定位控件com.henji.yunyi.yizhibang:id/et_login_password,输入内容为：1234
+[2017-11-11 10:40:11,494](INFO)root : &gt;&gt;&gt;点击控件获取：com.henji.yunyi.yizhibang:id/btn_login_submit
+
+
+        </pre>
+    </div>
+    <!--css div popup end-->
+
+    </td>
+    <td colspan='1' align='center'>
+No Case Detail
+</td>
+</tr>
+
+<tr id='Pt1.5' class='hiddenRow'>
+    <td class='passCase'><div class='testcase'>test05: 输入正确号码但多输入一位，输入错误密码</div></td>
+    <td colspan='4' align='center'>
+
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_Pt1.5')" >
+        pass</a>
+
+    <div id='div_Pt1.5' class="popup_window">
+        <div style='text-align: right; color:red;cursor:pointer'>
+        <a onfocus='this.blur();' onclick="document.getElementById('div_Pt1.5').style.display = 'none' " >
+           [x]</a>
+        </div>
+        <pre>
+        
+Pt1.5: [2017-11-11 10:40:45,003](INFO)root : *************************************************************
+[2017-11-11 10:40:45,004](INFO)root : &gt;&gt;&gt;获取元素：com.henji.yunyi.yizhibang:id/et_login_phone
+[2017-11-11 10:40:46,603](INFO)root : &gt;&gt;&gt;获取元素：com.henji.yunyi.yizhibang:id/et_login_password
+[2017-11-11 10:40:48,095](INFO)root : &gt;&gt;&gt;定位控件com.henji.yunyi.yizhibang:id/et_login_phone,输入内容为：135902831821
+[2017-11-11 10:40:48,797](INFO)root : &gt;&gt;&gt;定位控件com.henji.yunyi.yizhibang:id/et_login_password,输入内容为：1234
+[2017-11-11 10:40:55,065](INFO)root : 13590283182等于13590283182，输入超过11位手机号码，只截取显示前11位
+[2017-11-11 10:40:55,065](INFO)root : &gt;&gt;&gt;点击控件获取：com.henji.yunyi.yizhibang:id/btn_login_submit
+
+
+        </pre>
+    </div>
+    <!--css div popup end-->
+
+    </td>
+    <td colspan='1' align='center'>
+No Case Detail
+</td>
+</tr>
+
+<tr id='Pt1.6' class='hiddenRow'>
+    <td class='passCase'><div class='testcase'>test06: 输入正确号码但多输入一位,输入正确密码</div></td>
+    <td colspan='4' align='center'>
+
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_Pt1.6')" >
+        pass</a>
+
+    <div id='div_Pt1.6' class="popup_window">
+        <div style='text-align: right; color:red;cursor:pointer'>
+        <a onfocus='this.blur();' onclick="document.getElementById('div_Pt1.6').style.display = 'none' " >
+           [x]</a>
+        </div>
+        <pre>
+        
+Pt1.6: [2017-11-11 10:41:28,205](INFO)root : *************************************************************
+[2017-11-11 10:41:28,205](INFO)root : &gt;&gt;&gt;获取元素：com.henji.yunyi.yizhibang:id/et_login_phone
+[2017-11-11 10:41:29,773](INFO)root : &gt;&gt;&gt;获取元素：com.henji.yunyi.yizhibang:id/et_login_password
+[2017-11-11 10:41:31,255](INFO)root : &gt;&gt;&gt;定位控件com.henji.yunyi.yizhibang:id/et_login_phone,输入内容为：135902831821
+[2017-11-11 10:41:34,904](INFO)root : &gt;&gt;&gt;定位控件com.henji.yunyi.yizhibang:id/et_login_password,输入内容为：123456
+[2017-11-11 10:41:38,708](INFO)root : 13590283182等于13590283182，输入超过11位手机号码，只截取显示前11位
+[2017-11-11 10:41:38,708](INFO)root : &gt;&gt;&gt;点击控件获取：com.henji.yunyi.yizhibang:id/btn_login_submit
+[2017-11-11 10:41:54,051](INFO)root : 输入正确号码但多输入一位,输入正确密码，成功截取账号前11位，登录成功
+[2017-11-11 10:42:16,050](INFO)root : 0
+[2017-11-11 10:42:17,538](INFO)root : 1
+[2017-11-11 10:42:30,702](INFO)root : 2
+
+
+        </pre>
+    </div>
+    <!--css div popup end-->
+
+    </td>
+    <td colspan='1' align='center'>
+No Case Detail
+</td>
+</tr>
+
+<tr id='Pt1.7' class='hiddenRow'>
+    <td class='passCase'><div class='testcase'>test07: 输入非数字账号</div></td>
+    <td colspan='4' align='center'>
+
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_Pt1.7')" >
+        pass</a>
+
+    <div id='div_Pt1.7' class="popup_window">
+        <div style='text-align: right; color:red;cursor:pointer'>
+        <a onfocus='this.blur();' onclick="document.getElementById('div_Pt1.7').style.display = 'none' " >
+           [x]</a>
+        </div>
+        <pre>
+        
+Pt1.7: [2017-11-11 10:43:07,034](INFO)root : *************************************************************
+[2017-11-11 10:43:07,034](INFO)root : &gt;&gt;&gt;获取元素：com.henji.yunyi.yizhibang:id/et_login_phone
+[2017-11-11 10:43:08,764](INFO)root : &gt;&gt;&gt;获取元素：com.henji.yunyi.yizhibang:id/et_login_password
+[2017-11-11 10:43:10,685](INFO)root : &gt;&gt;&gt;定位控件com.henji.yunyi.yizhibang:id/et_login_phone,输入内容为：13590283+-*
+[2017-11-11 10:43:11,358](INFO)root : &gt;&gt;&gt;定位控件com.henji.yunyi.yizhibang:id/et_login_password,输入内容为：123478
+[2017-11-11 10:43:12,483](INFO)root : &gt;&gt;&gt;点击控件获取：com.henji.yunyi.yizhibang:id/btn_login_submit
+
+
+        </pre>
+    </div>
+    <!--css div popup end-->
+
+    </td>
+    <td colspan='1' align='center'>
+No Case Detail
+</td>
+</tr>
+
+<tr id='Pt1.8' class='hiddenRow'>
+    <td class='passCase'><div class='testcase'>test08: 输入正确手机号码，正确密码</div></td>
+    <td colspan='4' align='center'>
+
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_Pt1.8')" >
+        pass</a>
+
+    <div id='div_Pt1.8' class="popup_window">
+        <div style='text-align: right; color:red;cursor:pointer'>
+        <a onfocus='this.blur();' onclick="document.getElementById('div_Pt1.8').style.display = 'none' " >
+           [x]</a>
+        </div>
+        <pre>
+        
+Pt1.8: [2017-11-11 10:43:46,556](INFO)root : *************************************************************
+[2017-11-11 10:43:46,556](INFO)root : &gt;&gt;&gt;获取元素：com.henji.yunyi.yizhibang:id/et_login_phone
+[2017-11-11 10:43:48,296](INFO)root : &gt;&gt;&gt;获取元素：com.henji.yunyi.yizhibang:id/et_login_password
+[2017-11-11 10:43:50,229](INFO)root : &gt;&gt;&gt;定位控件com.henji.yunyi.yizhibang:id/et_login_phone,输入内容为：13590283182
+[2017-11-11 10:43:50,887](INFO)root : &gt;&gt;&gt;定位控件com.henji.yunyi.yizhibang:id/et_login_password,输入内容为：123456
+[2017-11-11 10:43:52,092](INFO)root : &gt;&gt;&gt;点击控件获取：com.henji.yunyi.yizhibang:id/btn_login_submit
+[2017-11-11 10:44:18,110](INFO)root : 0
+[2017-11-11 10:44:28,996](INFO)root : 3
+
+
+        </pre>
+    </div>
+    <!--css div popup end-->
+
+    </td>
+    <td colspan='1' align='center'>
+No Case Detail
+</td>
+</tr>
+
+<tr class='failClass'>
+    <td>test_case002_banner.Test_banner</td>
+    <td>5</td>
+    <td>4</td>
+    <td>1</td>
+    <td>0</td>
+    <td><a href="javascript:showClassDetail('c2',5)">Detail</a></td>
+</tr>
+
+<tr id='Pt2.1' class='hiddenRow'>
+    <td class='passCase'><div class='testcase'>test_01: 验证首页轮播图标识个数</div></td>
+    <td colspan='4' align='center'>
+
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_Pt2.1')" >
+        pass</a>
+
+    <div id='div_Pt2.1' class="popup_window">
+        <div style='text-align: right; color:red;cursor:pointer'>
+        <a onfocus='this.blur();' onclick="document.getElementById('div_Pt2.1').style.display = 'none' " >
+           [x]</a>
+        </div>
+        <pre>
+        
+Pt2.1: [2017-11-11 10:45:04,127](INFO)root : *****************************************************
+[2017-11-11 10:45:04,127](INFO)root : &gt;&gt;&gt;获取元素：com.henji.yunyi.yizhibang:id/et_login_phone
+[2017-11-11 10:45:05,872](INFO)root : &gt;&gt;&gt;获取元素：com.henji.yunyi.yizhibang:id/et_login_password
+[2017-11-11 10:45:08,359](INFO)root : 初始化登录框完成
+[2017-11-11 10:45:09,033](INFO)root : 输入账号为13590283182
+[2017-11-11 10:45:10,280](INFO)root : 输入密码为123456
+[2017-11-11 10:45:10,869](INFO)root : 点击登录按钮
+[2017-11-11 10:45:13,343](INFO)root : 获取轮播图个数标识符为3
+[2017-11-11 10:45:13,343](INFO)root : 判定轮播图个数为3个，符合预期
+[2017-11-11 10:45:36,165](INFO)root : 0
+[2017-11-11 10:45:46,812](INFO)root : 3
+
+
+        </pre>
+    </div>
+    <!--css div popup end-->
+
+    </td>
+    <td colspan='1' align='center'>
+No Case Detail
+</td>
+</tr>
+
+<tr id='Pt2.2' class='hiddenRow'>
+    <td class='passCase'><div class='testcase'>test_02: 验证轮播图1页面跳转</div></td>
+    <td colspan='4' align='center'>
+
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_Pt2.2')" >
+        pass</a>
+
+    <div id='div_Pt2.2' class="popup_window">
+        <div style='text-align: right; color:red;cursor:pointer'>
+        <a onfocus='this.blur();' onclick="document.getElementById('div_Pt2.2').style.display = 'none' " >
+           [x]</a>
+        </div>
+        <pre>
+        
+Pt2.2: [2017-11-11 10:46:21,595](INFO)root : *****************************************************
+[2017-11-11 10:46:21,595](INFO)root : &gt;&gt;&gt;获取元素：com.henji.yunyi.yizhibang:id/et_login_phone
+[2017-11-11 10:46:23,330](INFO)root : &gt;&gt;&gt;获取元素：com.henji.yunyi.yizhibang:id/et_login_password
+[2017-11-11 10:46:25,232](INFO)root : 初始化登录框完成
+[2017-11-11 10:46:25,884](INFO)root : 输入账号为13590283182
+[2017-11-11 10:46:27,112](INFO)root : 输入密码为123456
+[2017-11-11 10:46:27,710](INFO)root : 点击登录按钮
+[2017-11-11 10:46:30,411](INFO)root : 点击第一张轮播图进入内页面
+[2017-11-11 10:46:37,503](INFO)root : 检测到title为：易直帮2.0版本介绍
+[2017-11-11 10:46:37,593](INFO)root : 获取内页顶部text为：易直帮2.0版本介绍
+[2017-11-11 10:46:47,841](INFO)root : 视频正常播放
+[2017-11-11 10:46:49,020](INFO)root : 获取到返回按钮
+[2017-11-11 10:47:11,197](INFO)root : 0
+[2017-11-11 10:47:21,643](INFO)root : 3
+
+
+        </pre>
+    </div>
+    <!--css div popup end-->
+
+    </td>
+    <td colspan='1' align='center'>
+No Case Detail
+</td>
+</tr>
+
+<tr id='Ft2.3' class='none'>
+    <td class='failCase'><div class='testcase'>test_03: 验证轮播图2页面跳转</div></td>
+    <td colspan='4' align='center'>
+
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_Ft2.3')" >
+        fail</a>
+
+    <div id='div_Ft2.3' class="popup_window">
+        <div style='text-align: right; color:red;cursor:pointer'>
+        <a onfocus='this.blur();' onclick="document.getElementById('div_Ft2.3').style.display = 'none' " >
+           [x]</a>
+        </div>
+        <pre>
+        
+Ft2.3: [2017-11-11 10:47:58,004](INFO)root : *****************************************************
+[2017-11-11 10:47:58,005](INFO)root : &gt;&gt;&gt;获取元素：com.henji.yunyi.yizhibang:id/et_login_phone
+[2017-11-11 10:47:59,941](INFO)root : &gt;&gt;&gt;获取元素：com.henji.yunyi.yizhibang:id/et_login_password
+[2017-11-11 10:48:01,884](INFO)root : 初始化登录框完成
+[2017-11-11 10:48:02,555](INFO)root : 输入账号为13590283182
+[2017-11-11 10:48:03,794](INFO)root : 输入密码为123456
+[2017-11-11 10:48:04,378](INFO)root : 点击登录按钮
+[2017-11-11 10:48:09,985](INFO)root : 点击第二张轮播图进入内页面
+[2017-11-11 10:48:13,965](INFO)root : 成功获取到第二张轮播图的title
+[2017-11-11 10:48:14,127](INFO)root : 成功获取到第二张轮播图的底部“询底价”
+[2017-11-11 10:48:15,264](INFO)root : 获取到返回按钮
+[2017-11-11 10:48:38,084](INFO)root : 0
+[2017-11-11 10:48:48,708](INFO)root : 3
+Traceback (most recent call last):
+  File "C:\Users\Administrator\Desktop\python01\fengfan_unittest\feng_test_case\test_case002_banner.py", line 66, in test_03
+    WebDriverWait(self,5).unitl(lambda driver:self.driver.find_element_by_xpath('//android.view.View[@content-desc=\" 400-872-9169\"]'))
+AttributeError: 'WebDriverWait' object has no attribute 'unitl'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\Administrator\Desktop\python01\fengfan_unittest\feng_test_case\test_case002_banner.py", line 73, in test_03
+    self.assertEqual(1,2,msg='异常情况，该用例执行不成功')
+AssertionError: 1 != 2 : 异常情况，该用例执行不成功
+
+
+        </pre>
+    </div>
+    <!--css div popup end-->
+
+    </td>
+    <td colspan='1' align='center'>
+No Case Detail
+</td>
+</tr>
+
+<tr id='Pt2.4' class='hiddenRow'>
+    <td class='passCase'><div class='testcase'>test_04: 验证轮播图3页面跳转</div></td>
+    <td colspan='4' align='center'>
+
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_Pt2.4')" >
+        pass</a>
+
+    <div id='div_Pt2.4' class="popup_window">
+        <div style='text-align: right; color:red;cursor:pointer'>
+        <a onfocus='this.blur();' onclick="document.getElementById('div_Pt2.4').style.display = 'none' " >
+           [x]</a>
+        </div>
+        <pre>
+        
+Pt2.4: [2017-11-11 10:49:23,670](INFO)root : *****************************************************
+[2017-11-11 10:49:23,671](INFO)root : &gt;&gt;&gt;获取元素：com.henji.yunyi.yizhibang:id/et_login_phone
+[2017-11-11 10:49:25,477](INFO)root : &gt;&gt;&gt;获取元素：com.henji.yunyi.yizhibang:id/et_login_password
+[2017-11-11 10:49:27,364](INFO)root : 初始化登录框完成
+[2017-11-11 10:49:28,060](INFO)root : 输入账号为13590283182
+[2017-11-11 10:49:29,260](INFO)root : 输入密码为123456
+[2017-11-11 10:49:29,857](INFO)root : 点击登录按钮
+[2017-11-11 10:49:35,894](INFO)root : 点击第二张轮播图进入内页面
+[2017-11-11 10:49:39,102](INFO)root : 成功获取第三张轮播图title：【丰田车型报价】南宁广缘丰田-汽车之家,页面跳转成功
+[2017-11-11 10:49:40,272](INFO)root : 获取到返回按钮
+[2017-11-11 10:50:01,829](INFO)root : 0
+[2017-11-11 10:50:12,266](INFO)root : 3
+
+
+        </pre>
+    </div>
+    <!--css div popup end-->
+
+    </td>
+    <td colspan='1' align='center'>
+No Case Detail
+</td>
+</tr>
+
+<tr id='Pt2.5' class='hiddenRow'>
+    <td class='passCase'><div class='testcase'>test_05: 验证第三章轮播图车型数量</div></td>
+    <td colspan='4' align='center'>
+
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_Pt2.5')" >
+        pass</a>
+
+    <div id='div_Pt2.5' class="popup_window">
+        <div style='text-align: right; color:red;cursor:pointer'>
+        <a onfocus='this.blur();' onclick="document.getElementById('div_Pt2.5').style.display = 'none' " >
+           [x]</a>
+        </div>
+        <pre>
+        
+Pt2.5: [2017-11-11 10:50:46,860](INFO)root : *****************************************************
+[2017-11-11 10:50:46,861](INFO)root : &gt;&gt;&gt;获取元素：com.henji.yunyi.yizhibang:id/et_login_phone
+[2017-11-11 10:50:48,660](INFO)root : &gt;&gt;&gt;获取元素：com.henji.yunyi.yizhibang:id/et_login_password
+[2017-11-11 10:50:50,538](INFO)root : 初始化登录框完成
+[2017-11-11 10:50:51,190](INFO)root : 输入账号为13590283182
+[2017-11-11 10:50:52,409](INFO)root : 输入密码为123456
+[2017-11-11 10:50:52,988](INFO)root : 点击登录按钮
+[2017-11-11 10:50:58,981](INFO)root : 点击第二张轮播图进入内页面
+[2017-11-11 10:51:04,979](INFO)root : 获取到返回按钮
+[2017-11-11 10:51:27,508](INFO)root : 0
+[2017-11-11 10:51:38,234](INFO)root : 3
+
+
+        </pre>
+    </div>
+    <!--css div popup end-->
+
+    </td>
+    <td colspan='1' align='center'>
+No Case Detail
+</td>
+</tr>
+
+<tr class='errorClass'>
+    <td>test_case003_SmallNetWork.Test_banner</td>
+    <td>14</td>
+    <td>3</td>
+    <td>2</td>
+    <td>9</td>
+    <td><a href="javascript:showClassDetail('c3',14)">Detail</a></td>
+</tr>
+
+<tr id='Pt3.1' class='hiddenRow'>
+    <td class='passCase'><div class='testcase'>test01: 验证品牌微网页面正常跳转</div></td>
+    <td colspan='4' align='center'>
+
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_Pt3.1')" >
+        pass</a>
+
+    <div id='div_Pt3.1' class="popup_window">
+        <div style='text-align: right; color:red;cursor:pointer'>
+        <a onfocus='this.blur();' onclick="document.getElementById('div_Pt3.1').style.display = 'none' " >
+           [x]</a>
+        </div>
+        <pre>
+        
+Pt3.1: [2017-11-11 10:52:12,840](INFO)root : ****************************************
+[2017-11-11 10:52:12,840](INFO)root : &gt;&gt;&gt;获取元素：com.henji.yunyi.yizhibang:id/et_login_phone
+[2017-11-11 10:52:14,557](INFO)root : &gt;&gt;&gt;获取元素：com.henji.yunyi.yizhibang:id/et_login_password
+[2017-11-11 10:52:16,488](INFO)root : 初始化登录框完成
+[2017-11-11 10:52:17,131](INFO)root : 输入账号为13590283182
+[2017-11-11 10:52:18,359](INFO)root : 输入密码为123456
+[2017-11-11 10:52:18,943](INFO)root : 点击登录按钮
+[2017-11-11 10:52:21,622](INFO)root : &gt;&gt;&gt;点击控件获取：首页我知道啦id
+[2017-11-11 10:52:31,750](INFO)root : &gt;&gt;&gt;获取元素：com.henji.yunyi.yizhibang:id/tv_title
+[2017-11-11 10:52:31,948](INFO)root : 获取品牌微网：‘关于我们’
+[2017-11-11 10:52:32,046](INFO)root : 获取品牌微网：‘产品中心’
+[2017-11-11 10:52:32,132](INFO)root : 获取品牌微网：‘新闻动态’
+[2017-11-11 10:52:32,210](INFO)root : 获取品牌微网：‘视频中心’
+[2017-11-11 10:52:32,291](INFO)root : 获取品牌微网：‘招商加盟’
+[2017-11-11 10:52:32,387](INFO)root : 获取品牌微网：‘联系我们’
+[2017-11-11 10:52:32,916](INFO)root : 获取 "易直帮号" 为:94715474 
+[2017-11-11 10:52:33,076](INFO)root : 获取品牌微网左下角阅读量阅读 8
+[2017-11-11 10:52:33,076](INFO)root : 获取品牌微网的title为：品牌微网
+[2017-11-11 10:52:34,317](INFO)root : 获取到返回按钮
+[2017-11-11 10:52:35,508](INFO)root : 获取到返回按钮
+[2017-11-11 10:52:36,701](INFO)root : 获取到返回按钮
+[2017-11-11 10:52:37,849](INFO)root : 获取到返回按钮
+[2017-11-11 10:52:39,047](INFO)root : 获取到返回按钮
+[2017-11-11 10:52:40,192](INFO)root : 获取到返回按钮
+[2017-11-11 10:52:41,837](INFO)root : 获取到返回按钮
+[2017-11-11 10:52:43,249](INFO)root : 获取到返回按钮
+[2017-11-11 10:52:44,458](INFO)root : 获取到返回按钮
+[2017-11-11 10:52:45,661](INFO)root : 获取到返回按钮
+[2017-11-11 10:52:46,830](INFO)root : 获取到返回按钮
+[2017-11-11 10:52:48,536](INFO)root : 获取到返回按钮
+[2017-11-11 10:52:49,695](INFO)root : 获取到返回按钮
+[2017-11-11 10:52:50,889](INFO)root : 获取到返回按钮
+[2017-11-11 10:52:52,063](INFO)root : 获取到返回按钮
+[2017-11-11 10:52:53,270](INFO)root : 获取到返回按钮
+[2017-11-11 10:52:54,468](INFO)root : 获取到返回按钮
+[2017-11-11 10:52:55,667](INFO)root : 获取到返回按钮
+[2017-11-11 10:52:56,826](INFO)root : 获取到返回按钮
+[2017-11-11 10:52:58,219](INFO)root : 获取到返回按钮
+[2017-11-11 10:52:59,410](INFO)root : 获取到返回按钮
+[2017-11-11 10:53:00,612](INFO)root : 获取到返回按钮
+[2017-11-11 10:53:01,777](INFO)root : 获取到返回按钮
+[2017-11-11 10:53:02,934](INFO)root : 获取到返回按钮
+[2017-11-11 10:53:04,109](INFO)root : 获取到返回按钮
+[2017-11-11 10:53:05,276](INFO)root : 获取到返回按钮
+[2017-11-11 10:53:06,432](INFO)root : 获取到返回按钮
+[2017-11-11 10:53:07,575](INFO)root : 获取到返回按钮
+[2017-11-11 10:53:08,744](INFO)root : 获取到返回按钮
+[2017-11-11 10:53:09,922](INFO)root : 获取到返回按钮
+[2017-11-11 10:53:11,137](INFO)root : 获取到返回按钮
+[2017-11-11 10:53:12,334](INFO)root : 获取到返回按钮
+[2017-11-11 10:53:13,496](INFO)root : 获取到返回按钮
+[2017-11-11 10:53:15,188](INFO)root : 获取到返回按钮
+[2017-11-11 10:53:16,390](INFO)root : 获取到返回按钮
+[2017-11-11 10:53:17,508](INFO)root : 获取到返回按钮
+[2017-11-11 10:53:18,701](INFO)root : 获取到返回按钮
+[2017-11-11 10:53:19,900](INFO)root : 获取到返回按钮
+[2017-11-11 10:53:21,048](INFO)root : 获取到返回按钮
+[2017-11-11 10:53:22,254](INFO)root : 获取到返回按钮
+[2017-11-11 10:53:23,408](INFO)root : 获取到返回按钮
+[2017-11-11 10:53:24,545](INFO)root : 获取到返回按钮
+[2017-11-11 10:53:25,716](INFO)root : 获取到返回按钮
+[2017-11-11 10:53:26,850](INFO)root : 获取到返回按钮
+[2017-11-11 10:53:28,528](INFO)root : 获取到返回按钮
+[2017-11-11 10:53:30,222](INFO)root : 获取到返回按钮
+[2017-11-11 10:53:31,423](INFO)root : 获取到返回按钮
+[2017-11-11 10:53:32,543](INFO)root : 获取到返回按钮
+[2017-11-11 10:53:33,685](INFO)root : 获取到返回按钮
+[2017-11-11 10:53:35,357](INFO)root : 获取到返回按钮
+[2017-11-11 10:53:36,500](INFO)root : 获取到返回按钮
+[2017-11-11 10:53:37,623](INFO)root : 获取到返回按钮
+[2017-11-11 10:53:38,772](INFO)root : 获取到返回按钮
+[2017-11-11 10:53:39,962](INFO)root : 获取到返回按钮
+[2017-11-11 10:53:41,134](INFO)root : 获取到返回按钮
+[2017-11-11 10:53:42,301](INFO)root : 获取到返回按钮
+[2017-11-11 10:53:43,495](INFO)root : 获取到返回按钮
+[2017-11-11 10:53:44,649](INFO)root : 获取到返回按钮
+[2017-11-11 10:53:45,843](INFO)root : 获取到返回按钮
+[2017-11-11 10:53:46,984](INFO)root : 获取到返回按钮
+[2017-11-11 10:53:48,140](INFO)root : 获取到返回按钮
+[2017-11-11 10:53:49,291](INFO)root : 获取到返回按钮
+[2017-11-11 10:53:50,988](INFO)root : 获取到返回按钮
+[2017-11-11 10:53:52,145](INFO)root : 获取到返回按钮
+[2017-11-11 10:53:53,352](INFO)root : 获取到返回按钮
+[2017-11-11 10:53:54,561](INFO)root : 获取到返回按钮
+[2017-11-11 10:53:55,739](INFO)root : 获取到返回按钮
+[2017-11-11 10:53:56,871](INFO)root : 获取到返回按钮
+[2017-11-11 10:53:58,010](INFO)root : 获取到返回按钮
+[2017-11-11 10:53:59,195](INFO)root : 获取到返回按钮
+[2017-11-11 10:54:00,368](INFO)root : 获取到返回按钮
+[2017-11-11 10:54:01,526](INFO)root : 获取到返回按钮
+[2017-11-11 10:54:02,692](INFO)root : 获取到返回按钮
+[2017-11-11 10:54:03,915](INFO)root : 获取到返回按钮
+[2017-11-11 10:54:05,107](INFO)root : 获取到返回按钮
+[2017-11-11 10:54:06,317](INFO)root : 获取到返回按钮
+[2017-11-11 10:54:07,448](INFO)root : 获取到返回按钮
+[2017-11-11 10:54:08,611](INFO)root : 获取到返回按钮
+[2017-11-11 10:54:09,772](INFO)root : 获取到返回按钮
+[2017-11-11 10:54:10,928](INFO)root : 获取到返回按钮
+[2017-11-11 10:54:12,074](INFO)root : 获取到返回按钮
+[2017-11-11 10:54:13,264](INFO)root : 获取到返回按钮
+[2017-11-11 10:54:14,410](INFO)root : 获取到返回按钮
+[2017-11-11 10:54:15,564](INFO)root : 获取到返回按钮
+[2017-11-11 10:54:16,703](INFO)root : 获取到返回按钮
+[2017-11-11 10:54:17,819](INFO)root : 获取到返回按钮
+[2017-11-11 10:54:18,994](INFO)root : 获取到返回按钮
+[2017-11-11 10:54:20,185](INFO)root : 获取到返回按钮
+[2017-11-11 10:54:21,747](INFO)root : 获取到返回按钮
+[2017-11-11 10:54:44,042](INFO)root : 0
+[2017-11-11 10:54:54,343](INFO)root : 3
+
+
+        </pre>
+    </div>
+    <!--css div popup end-->
+
+    </td>
+    <td colspan='1' align='center'>
+No Case Detail
+</td>
+</tr>
+
+<tr id='Pt3.2' class='hiddenRow'>
+    <td class='passCase'><div class='testcase'>test02: 验证品牌微网用户昵称修改</div></td>
+    <td colspan='4' align='center'>
+
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_Pt3.2')" >
+        pass</a>
+
+    <div id='div_Pt3.2' class="popup_window">
+        <div style='text-align: right; color:red;cursor:pointer'>
+        <a onfocus='this.blur();' onclick="document.getElementById('div_Pt3.2').style.display = 'none' " >
+           [x]</a>
+        </div>
+        <pre>
+        
+Pt3.2: [2017-11-11 10:55:28,873](INFO)root : ****************************************
+[2017-11-11 10:55:28,873](INFO)root : &gt;&gt;&gt;获取元素：com.henji.yunyi.yizhibang:id/et_login_phone
+[2017-11-11 10:55:30,607](INFO)root : &gt;&gt;&gt;获取元素：com.henji.yunyi.yizhibang:id/et_login_password
+[2017-11-11 10:55:32,503](INFO)root : 初始化登录框完成
+[2017-11-11 10:55:33,143](INFO)root : 输入账号为13590283182
+[2017-11-11 10:55:34,362](INFO)root : 输入密码为123456
+[2017-11-11 10:55:34,951](INFO)root : 点击登录按钮
+[2017-11-11 10:55:37,641](INFO)root : &gt;&gt;&gt;点击控件获取：com.henji.yunyi.yizhibang:id/mongolia_promotion_1_know_btn
+[2017-11-11 10:55:47,919](INFO)root : 获取到原来的用户昵称：冯凡10163250
+[2017-11-11 10:55:48,031](INFO)root : 进入信息编辑页面
+[2017-11-11 10:55:49,450](INFO)root : 点击编辑姓名
+[2017-11-11 10:55:49,450](INFO)root : &gt;&gt;&gt;定位控件com.henji.yunyi.yizhibang:id/et_dialog_input_content,输入内容为：冯凡11105549
+[2017-11-11 10:55:50,928](INFO)root : &gt;&gt;&gt;点击控件获取：com.henji.yunyi.yizhibang:id/btn_dialog_input_confirm
+[2017-11-11 10:55:52,388](INFO)root : 获取到toast：[&lt;appium.webdriver.webelement.WebElement (session="9e6c1318-7856-4cf3-b6e9-36e9220a273e", element="06768b21-527a-4303-86c2-eb3b14d523f0")&gt;]
+[2017-11-11 10:55:52,389](INFO)root : &gt;&gt;&gt;点击控件获取：com.henji.yunyi.yizhibang:id/tv_back
+[2017-11-11 10:55:52,483](INFO)root : 点击“返回”回到品牌微网首页
+[2017-11-11 10:55:53,561](INFO)root : 初始昵称为：冯凡10163250，输入更改的昵称为：冯凡11105549，输入完成之后首页展示的昵称为:冯凡11105549
+[2017-11-11 10:55:54,738](INFO)root : 获取到返回按钮
+[2017-11-11 10:56:16,926](INFO)root : 0
+[2017-11-11 10:56:27,794](INFO)root : 3
+
+
+        </pre>
+    </div>
+    <!--css div popup end-->
+
+    </td>
+    <td colspan='1' align='center'>
+No Case Detail
+</td>
+</tr>
+
+<tr id='Et3.3' class='none'>
+    <td class='errorCase'><div class='testcase'>test03: 验证公司名称更改</div></td>
+    <td colspan='4' align='center'>
+
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_Et3.3')" >
+        error</a>
+
+    <div id='div_Et3.3' class="popup_window">
+        <div style='text-align: right; color:red;cursor:pointer'>
+        <a onfocus='this.blur();' onclick="document.getElementById('div_Et3.3').style.display = 'none' " >
+           [x]</a>
+        </div>
+        <pre>
+        
+Et3.3: [2017-11-11 10:57:02,243](INFO)root : ****************************************
+[2017-11-11 10:57:02,244](INFO)root : &gt;&gt;&gt;获取元素：com.henji.yunyi.yizhibang:id/et_login_phone
+[2017-11-11 10:57:03,993](INFO)root : &gt;&gt;&gt;获取元素：com.henji.yunyi.yizhibang:id/et_login_password
+[2017-11-11 10:57:05,907](INFO)root : 初始化登录框完成
+[2017-11-11 10:57:06,558](INFO)root : 输入账号为13590283182
+[2017-11-11 10:57:07,766](INFO)root : 输入密码为123456
+[2017-11-11 10:57:08,386](INFO)root : 点击登录按钮
+[2017-11-11 10:57:11,119](INFO)root : &gt;&gt;&gt;点击控件获取：com.henji.yunyi.yizhibang:id/mongolia_promotion_1_know_btn
+[2017-11-11 10:57:21,210](INFO)root : 未获取到“我知道啦”
+[2017-11-11 10:57:31,768](INFO)root : 获取到原来的公司名称：公司名称为空
+Traceback (most recent call last):
+  File "C:\Users\Administrator\Desktop\python01\fengfan_unittest\feng_test_case\test_case003_SmallNetWork.py", line 95, in test03
+    startMethod.action_Id(self, flash['首页知道啦id'], 'click')
+  File "C:\Users\Administrator\Desktop\python01\fengfan_unittest\feng_test_method\method.py", line 42, in action_Id
+    return self.driver.find_element_by_id(id).click()
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python35\lib\site-packages\selenium\webdriver\remote\webdriver.py", line 341, in find_element_by_id
+    return self.find_element(by=By.ID, value=id_)
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python35\lib\site-packages\selenium\webdriver\remote\webdriver.py", line 843, in find_element
+    'value': value})['value']
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python35\lib\site-packages\selenium\webdriver\remote\webdriver.py", line 308, in execute
+    self.error_handler.check_response(response)
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python35\lib\site-packages\appium\webdriver\errorhandler.py", line 29, in check_response
+    raise wde
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python35\lib\site-packages\appium\webdriver\errorhandler.py", line 24, in check_response
+    super(MobileErrorHandler, self).check_response(response)
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python35\lib\site-packages\selenium\webdriver\remote\errorhandler.py", line 194, in check_response
+    raise exception_class(message, screen, stacktrace)
+selenium.common.exceptions.NoSuchElementException: Message: An element could not be located on the page using the given search parameters.
+
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\Administrator\Desktop\python01\fengfan_unittest\feng_test_case\test_case003_SmallNetWork.py", line 104, in test03
+    'com.henji.yunyi.yizhibang:id/rl_brand_index_container').click()  # 点击进入信息编辑页面
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python35\lib\site-packages\selenium\webdriver\remote\webdriver.py", line 341, in find_element_by_id
+    return self.find_element(by=By.ID, value=id_)
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python35\lib\site-packages\selenium\webdriver\remote\webdriver.py", line 843, in find_element
+    'value': value})['value']
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python35\lib\site-packages\selenium\webdriver\remote\webdriver.py", line 308, in execute
+    self.error_handler.check_response(response)
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python35\lib\site-packages\appium\webdriver\errorhandler.py", line 29, in check_response
+    raise wde
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python35\lib\site-packages\appium\webdriver\errorhandler.py", line 24, in check_response
+    super(MobileErrorHandler, self).check_response(response)
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python35\lib\site-packages\selenium\webdriver\remote\errorhandler.py", line 194, in check_response
+    raise exception_class(message, screen, stacktrace)
+selenium.common.exceptions.NoSuchElementException: Message: An element could not be located on the page using the given search parameters.
+
+
+
+        </pre>
+    </div>
+    <!--css div popup end-->
+
+    </td>
+    <td colspan='1' align='center'>
+No Case Detail
+</td>
+</tr>
+
+<tr id='Et3.4' class='none'>
+    <td class='errorCase'><div class='testcase'>test03: 验证公司名称更改</div></td>
+    <td colspan='4' align='center'>
+
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_Et3.4')" >
+        error</a>
+
+    <div id='div_Et3.4' class="popup_window">
+        <div style='text-align: right; color:red;cursor:pointer'>
+        <a onfocus='this.blur();' onclick="document.getElementById('div_Et3.4').style.display = 'none' " >
+           [x]</a>
+        </div>
+        <pre>
+        
+Et3.4: [2017-11-11 10:57:02,243](INFO)root : ****************************************
+[2017-11-11 10:57:02,244](INFO)root : &gt;&gt;&gt;获取元素：com.henji.yunyi.yizhibang:id/et_login_phone
+[2017-11-11 10:57:03,993](INFO)root : &gt;&gt;&gt;获取元素：com.henji.yunyi.yizhibang:id/et_login_password
+[2017-11-11 10:57:05,907](INFO)root : 初始化登录框完成
+[2017-11-11 10:57:06,558](INFO)root : 输入账号为13590283182
+[2017-11-11 10:57:07,766](INFO)root : 输入密码为123456
+[2017-11-11 10:57:08,386](INFO)root : 点击登录按钮
+[2017-11-11 10:57:11,119](INFO)root : &gt;&gt;&gt;点击控件获取：com.henji.yunyi.yizhibang:id/mongolia_promotion_1_know_btn
+[2017-11-11 10:57:21,210](INFO)root : 未获取到“我知道啦”
+[2017-11-11 10:57:31,768](INFO)root : 获取到原来的公司名称：公司名称为空
+Traceback (most recent call last):
+  File "C:\Users\Administrator\Desktop\python01\fengfan_unittest\feng_test_method\method.py", line 134, in backLogin
+    self.driver.find_element_by_id('com.henji.yunyi.yizhibang:id/rl_home_mine').click()  # 点击“我”
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python35\lib\site-packages\selenium\webdriver\remote\webdriver.py", line 341, in find_element_by_id
+    return self.find_element(by=By.ID, value=id_)
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python35\lib\site-packages\selenium\webdriver\remote\webdriver.py", line 843, in find_element
+    'value': value})['value']
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python35\lib\site-packages\selenium\webdriver\remote\webdriver.py", line 308, in execute
+    self.error_handler.check_response(response)
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python35\lib\site-packages\appium\webdriver\errorhandler.py", line 29, in check_response
+    raise wde
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python35\lib\site-packages\appium\webdriver\errorhandler.py", line 24, in check_response
+    super(MobileErrorHandler, self).check_response(response)
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python35\lib\site-packages\selenium\webdriver\remote\errorhandler.py", line 194, in check_response
+    raise exception_class(message, screen, stacktrace)
+selenium.common.exceptions.NoSuchElementException: Message: An element could not be located on the page using the given search parameters.
+
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\Administrator\Desktop\python01\fengfan_unittest\feng_test_case\test_case003_SmallNetWork.py", line 19, in tearDown
+    startMethod.backLogin(self, a=None, b=None)
+  File "C:\Users\Administrator\Desktop\python01\fengfan_unittest\feng_test_method\method.py", line 152, in backLogin
+    self.driver.find_element_by_xpath('//android.widget.TextView[@text=\"设置\"]').click()
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python35\lib\site-packages\selenium\webdriver\remote\webdriver.py", line 365, in find_element_by_xpath
+    return self.find_element(by=By.XPATH, value=xpath)
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python35\lib\site-packages\selenium\webdriver\remote\webdriver.py", line 843, in find_element
+    'value': value})['value']
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python35\lib\site-packages\selenium\webdriver\remote\webdriver.py", line 308, in execute
+    self.error_handler.check_response(response)
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python35\lib\site-packages\appium\webdriver\errorhandler.py", line 29, in check_response
+    raise wde
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python35\lib\site-packages\appium\webdriver\errorhandler.py", line 24, in check_response
+    super(MobileErrorHandler, self).check_response(response)
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python35\lib\site-packages\selenium\webdriver\remote\errorhandler.py", line 194, in check_response
+    raise exception_class(message, screen, stacktrace)
+selenium.common.exceptions.NoSuchElementException: Message: An element could not be located on the page using the given search parameters.
+
+
+
+        </pre>
+    </div>
+    <!--css div popup end-->
+
+    </td>
+    <td colspan='1' align='center'>
+No Case Detail
+</td>
+</tr>
+
+<tr id='Et3.5' class='none'>
+    <td class='errorCase'><div class='testcase'>test04: 验证职务更改</div></td>
+    <td colspan='4' align='center'>
+
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_Et3.5')" >
+        error</a>
+
+    <div id='div_Et3.5' class="popup_window">
+        <div style='text-align: right; color:red;cursor:pointer'>
+        <a onfocus='this.blur();' onclick="document.getElementById('div_Et3.5').style.display = 'none' " >
+           [x]</a>
+        </div>
+        <pre>
+        
+Et3.5: [2017-11-11 10:58:52,418](INFO)root : ****************************************
+[2017-11-11 10:58:52,419](INFO)root : &gt;&gt;&gt;获取元素：com.henji.yunyi.yizhibang:id/et_login_phone
+[2017-11-11 10:59:25,488](INFO)root : 0
+[2017-11-11 10:59:36,366](INFO)root : 3
+Traceback (most recent call last):
+  File "C:\Users\Administrator\Desktop\python01\fengfan_unittest\feng_test_case\test_case003_SmallNetWork.py", line 126, in test04
+    startMethod.loginYiZhiBang(self, a='13590283182', b='123456')
+  File "C:\Users\Administrator\Desktop\python01\fengfan_unittest\feng_test_method\method.py", line 101, in loginYiZhiBang
+    startMethod.action_Id(self, login['账号id'], 'obtain').clear()  # 清除账号输入框
+  File "C:\Users\Administrator\Desktop\python01\fengfan_unittest\feng_test_method\method.py", line 37, in action_Id
+    return self.driver.find_element_by_id(id)
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python35\lib\site-packages\selenium\webdriver\remote\webdriver.py", line 341, in find_element_by_id
+    return self.find_element(by=By.ID, value=id_)
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python35\lib\site-packages\selenium\webdriver\remote\webdriver.py", line 843, in find_element
+    'value': value})['value']
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python35\lib\site-packages\selenium\webdriver\remote\webdriver.py", line 308, in execute
+    self.error_handler.check_response(response)
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python35\lib\site-packages\appium\webdriver\errorhandler.py", line 29, in check_response
+    raise wde
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python35\lib\site-packages\appium\webdriver\errorhandler.py", line 24, in check_response
+    super(MobileErrorHandler, self).check_response(response)
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python35\lib\site-packages\selenium\webdriver\remote\errorhandler.py", line 194, in check_response
+    raise exception_class(message, screen, stacktrace)
+selenium.common.exceptions.NoSuchElementException: Message: An element could not be located on the page using the given search parameters.
+
+
+
+        </pre>
+    </div>
+    <!--css div popup end-->
+
+    </td>
+    <td colspan='1' align='center'>
+No Case Detail
+</td>
+</tr>
+
+<tr id='Pt3.6' class='hiddenRow'>
+    <td class='passCase'><div class='testcase'>test05: 验证电话号码输入</div></td>
+    <td colspan='4' align='center'>
+
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_Pt3.6')" >
+        pass</a>
+
+    <div id='div_Pt3.6' class="popup_window">
+        <div style='text-align: right; color:red;cursor:pointer'>
+        <a onfocus='this.blur();' onclick="document.getElementById('div_Pt3.6').style.display = 'none' " >
+           [x]</a>
+        </div>
+        <pre>
+        
+Pt3.6: [2017-11-11 11:00:10,696](INFO)root : ****************************************
+[2017-11-11 11:00:10,696](INFO)root : &gt;&gt;&gt;获取元素：com.henji.yunyi.yizhibang:id/et_login_phone
+[2017-11-11 11:00:12,449](INFO)root : &gt;&gt;&gt;获取元素：com.henji.yunyi.yizhibang:id/et_login_password
+[2017-11-11 11:00:14,380](INFO)root : 初始化登录框完成
+[2017-11-11 11:00:15,029](INFO)root : 输入账号为13590283182
+[2017-11-11 11:00:16,244](INFO)root : 输入密码为123456
+[2017-11-11 11:00:16,844](INFO)root : 点击登录按钮
+[2017-11-11 11:00:20,643](INFO)root : &gt;&gt;&gt;点击控件获取：com.henji.yunyi.yizhibang:id/mongolia_promotion_1_know_btn
+[2017-11-11 11:00:31,137](INFO)root : 未获取到“我知道啦”
+[2017-11-11 11:00:31,249](INFO)root : 进入信息编辑页面
+[2017-11-11 11:00:32,525](INFO)root : 获取到原来的tel：13510165802
+[2017-11-11 11:00:32,684](INFO)root : 点击电话，进入修改tel页面
+[2017-11-11 11:00:35,025](INFO)root : &gt;&gt;&gt;定位控件com.henji.yunyi.yizhibang:id/et_dialog_input_content,输入内容为：13511110035
+[2017-11-11 11:00:36,075](INFO)root : 输入的账号为：13511110035
+[2017-11-11 11:00:36,075](INFO)root : &gt;&gt;&gt;点击控件获取：com.henji.yunyi.yizhibang:id/btn_dialog_input_confirm
+[2017-11-11 11:00:37,117](INFO)root : 获取到toast：[&lt;appium.webdriver.webelement.WebElement (session="aa19ea28-c73c-4915-bfb3-bde1fe6f3c2d", element="95be3d41-130d-4256-9af1-5f371b994a9e")&gt;]
+[2017-11-11 11:00:37,579](INFO)root : 初始tel：13510165802，输入tel：13511110035，显示的tel：13511110035
+[2017-11-11 11:00:38,744](INFO)root : 获取到返回按钮
+[2017-11-11 11:00:39,956](INFO)root : 获取到返回按钮
+[2017-11-11 11:01:03,017](INFO)root : 0
+[2017-11-11 11:01:13,656](INFO)root : 3
+
+
+        </pre>
+    </div>
+    <!--css div popup end-->
+
+    </td>
+    <td colspan='1' align='center'>
+No Case Detail
+</td>
+</tr>
+
+<tr id='Et3.7' class='none'>
+    <td class='errorCase'><div class='testcase'>test06: 权限定位</div></td>
+    <td colspan='4' align='center'>
+
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_Et3.7')" >
+        error</a>
+
+    <div id='div_Et3.7' class="popup_window">
+        <div style='text-align: right; color:red;cursor:pointer'>
+        <a onfocus='this.blur();' onclick="document.getElementById('div_Et3.7').style.display = 'none' " >
+           [x]</a>
+        </div>
+        <pre>
+        
+Et3.7: Traceback (most recent call last):
+  File "C:\Users\Administrator\Desktop\python01\fengfan_unittest\feng_test_method\method.py", line 134, in backLogin
+    self.driver.find_element_by_id('com.henji.yunyi.yizhibang:id/rl_home_mine').click()  # 点击“我”
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python35\lib\site-packages\selenium\webdriver\remote\webdriver.py", line 341, in find_element_by_id
+    return self.find_element(by=By.ID, value=id_)
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python35\lib\site-packages\selenium\webdriver\remote\webdriver.py", line 843, in find_element
+    'value': value})['value']
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python35\lib\site-packages\selenium\webdriver\remote\webdriver.py", line 308, in execute
+    self.error_handler.check_response(response)
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python35\lib\site-packages\appium\webdriver\errorhandler.py", line 29, in check_response
+    raise wde
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python35\lib\site-packages\appium\webdriver\errorhandler.py", line 24, in check_response
+    super(MobileErrorHandler, self).check_response(response)
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python35\lib\site-packages\selenium\webdriver\remote\errorhandler.py", line 194, in check_response
+    raise exception_class(message, screen, stacktrace)
+selenium.common.exceptions.NoSuchElementException: Message: An element could not be located on the page using the given search parameters.
+
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\Administrator\Desktop\python01\fengfan_unittest\feng_test_case\test_case003_SmallNetWork.py", line 19, in tearDown
+    startMethod.backLogin(self, a=None, b=None)
+  File "C:\Users\Administrator\Desktop\python01\fengfan_unittest\feng_test_method\method.py", line 152, in backLogin
+    self.driver.find_element_by_xpath('//android.widget.TextView[@text=\"设置\"]').click()
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python35\lib\site-packages\selenium\webdriver\remote\webdriver.py", line 365, in find_element_by_xpath
+    return self.find_element(by=By.XPATH, value=xpath)
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python35\lib\site-packages\selenium\webdriver\remote\webdriver.py", line 843, in find_element
+    'value': value})['value']
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python35\lib\site-packages\selenium\webdriver\remote\webdriver.py", line 308, in execute
+    self.error_handler.check_response(response)
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python35\lib\site-packages\appium\webdriver\errorhandler.py", line 29, in check_response
+    raise wde
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python35\lib\site-packages\appium\webdriver\errorhandler.py", line 24, in check_response
+    super(MobileErrorHandler, self).check_response(response)
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python35\lib\site-packages\selenium\webdriver\remote\errorhandler.py", line 194, in check_response
+    raise exception_class(message, screen, stacktrace)
+selenium.common.exceptions.NoSuchElementException: Message: An element could not be located on the page using the given search parameters.
+
+
+
+        </pre>
+    </div>
+    <!--css div popup end-->
+
+    </td>
+    <td colspan='1' align='center'>
+No Case Detail
+</td>
+</tr>
+
+<tr id='Et3.8' class='none'>
+    <td class='errorCase'><div class='testcase'>test07: 微信二维码</div></td>
+    <td colspan='4' align='center'>
+
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_Et3.8')" >
+        error</a>
+
+    <div id='div_Et3.8' class="popup_window">
+        <div style='text-align: right; color:red;cursor:pointer'>
+        <a onfocus='this.blur();' onclick="document.getElementById('div_Et3.8').style.display = 'none' " >
+           [x]</a>
+        </div>
+        <pre>
+        
+Et3.8: [2017-11-11 11:02:58,885](INFO)root : ****************************************
+[2017-11-11 11:02:58,885](INFO)root : &gt;&gt;&gt;获取元素：com.henji.yunyi.yizhibang:id/et_login_phone
+[2017-11-11 11:03:00,656](INFO)root : &gt;&gt;&gt;获取元素：com.henji.yunyi.yizhibang:id/et_login_password
+[2017-11-11 11:03:02,594](INFO)root : 初始化登录框完成
+[2017-11-11 11:03:03,252](INFO)root : 输入账号为13590283182
+[2017-11-11 11:03:04,481](INFO)root : 输入密码为123456
+[2017-11-11 11:03:05,091](INFO)root : 点击登录按钮
+[2017-11-11 11:03:07,745](INFO)root : &gt;&gt;&gt;点击控件获取：com.henji.yunyi.yizhibang:id/mongolia_promotion_1_know_btn
+[2017-11-11 11:03:18,308](INFO)root : 未获取到“我知道啦”
+[2017-11-11 11:03:18,428](INFO)root : 进入信息编辑页面
+[2017-11-11 11:03:18,429](INFO)root : &gt;&gt;&gt;点击控件获取：com.henji.yunyi.yizhibang:id/rl_brand_index_qr_code_container
+[2017-11-11 11:03:24,406](INFO)root : &gt;&gt;&gt;点击控件获取：com.miui.gallery:id/ok
+[2017-11-11 11:03:35,622](INFO)root : 不存在该toast
+[2017-11-11 11:03:36,835](INFO)root : 获取到返回按钮
+[2017-11-11 11:03:38,000](INFO)root : 获取到返回按钮
+Traceback (most recent call last):
+  File "C:\Users\Administrator\Desktop\python01\fengfan_unittest\feng_test_method\method.py", line 134, in backLogin
+    self.driver.find_element_by_id('com.henji.yunyi.yizhibang:id/rl_home_mine').click()  # 点击“我”
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python35\lib\site-packages\selenium\webdriver\remote\webdriver.py", line 341, in find_element_by_id
+    return self.find_element(by=By.ID, value=id_)
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python35\lib\site-packages\selenium\webdriver\remote\webdriver.py", line 843, in find_element
+    'value': value})['value']
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python35\lib\site-packages\selenium\webdriver\remote\webdriver.py", line 308, in execute
+    self.error_handler.check_response(response)
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python35\lib\site-packages\appium\webdriver\errorhandler.py", line 29, in check_response
+    raise wde
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python35\lib\site-packages\appium\webdriver\errorhandler.py", line 24, in check_response
+    super(MobileErrorHandler, self).check_response(response)
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python35\lib\site-packages\selenium\webdriver\remote\errorhandler.py", line 194, in check_response
+    raise exception_class(message, screen, stacktrace)
+selenium.common.exceptions.NoSuchElementException: Message: An element could not be located on the page using the given search parameters.
+
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\Administrator\Desktop\python01\fengfan_unittest\feng_test_case\test_case003_SmallNetWork.py", line 19, in tearDown
+    startMethod.backLogin(self, a=None, b=None)
+  File "C:\Users\Administrator\Desktop\python01\fengfan_unittest\feng_test_method\method.py", line 152, in backLogin
+    self.driver.find_element_by_xpath('//android.widget.TextView[@text=\"设置\"]').click()
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python35\lib\site-packages\selenium\webdriver\remote\webdriver.py", line 365, in find_element_by_xpath
+    return self.find_element(by=By.XPATH, value=xpath)
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python35\lib\site-packages\selenium\webdriver\remote\webdriver.py", line 843, in find_element
+    'value': value})['value']
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python35\lib\site-packages\selenium\webdriver\remote\webdriver.py", line 308, in execute
+    self.error_handler.check_response(response)
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python35\lib\site-packages\appium\webdriver\errorhandler.py", line 29, in check_response
+    raise wde
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python35\lib\site-packages\appium\webdriver\errorhandler.py", line 24, in check_response
+    super(MobileErrorHandler, self).check_response(response)
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python35\lib\site-packages\selenium\webdriver\remote\errorhandler.py", line 194, in check_response
+    raise exception_class(message, screen, stacktrace)
+selenium.common.exceptions.NoSuchElementException: Message: An element could not be located on the page using the given search parameters.
+
+
+
+        </pre>
+    </div>
+    <!--css div popup end-->
+
+    </td>
+    <td colspan='1' align='center'>
+No Case Detail
+</td>
+</tr>
+
+<tr id='Et3.9' class='none'>
+    <td class='errorCase'><div class='testcase'>test08: 预览模块，验证码个人信息是否与主页面一致</div></td>
+    <td colspan='4' align='center'>
+
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_Et3.9')" >
+        error</a>
+
+    <div id='div_Et3.9' class="popup_window">
+        <div style='text-align: right; color:red;cursor:pointer'>
+        <a onfocus='this.blur();' onclick="document.getElementById('div_Et3.9').style.display = 'none' " >
+           [x]</a>
+        </div>
+        <pre>
+        
+Et3.9: [2017-11-11 11:04:49,785](INFO)root : ****************************************
+[2017-11-11 11:04:49,785](INFO)root : &gt;&gt;&gt;获取元素：com.henji.yunyi.yizhibang:id/et_login_phone
+Traceback (most recent call last):
+  File "C:\Users\Administrator\Desktop\python01\fengfan_unittest\feng_test_case\test_case003_SmallNetWork.py", line 226, in test08
+    startMethod.loginYiZhiBang(self, a='13590283182', b='123456')
+  File "C:\Users\Administrator\Desktop\python01\fengfan_unittest\feng_test_method\method.py", line 101, in loginYiZhiBang
+    startMethod.action_Id(self, login['账号id'], 'obtain').clear()  # 清除账号输入框
+  File "C:\Users\Administrator\Desktop\python01\fengfan_unittest\feng_test_method\method.py", line 37, in action_Id
+    return self.driver.find_element_by_id(id)
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python35\lib\site-packages\selenium\webdriver\remote\webdriver.py", line 341, in find_element_by_id
+    return self.find_element(by=By.ID, value=id_)
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python35\lib\site-packages\selenium\webdriver\remote\webdriver.py", line 843, in find_element
+    'value': value})['value']
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python35\lib\site-packages\selenium\webdriver\remote\webdriver.py", line 308, in execute
+    self.error_handler.check_response(response)
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python35\lib\site-packages\appium\webdriver\errorhandler.py", line 29, in check_response
+    raise wde
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python35\lib\site-packages\appium\webdriver\errorhandler.py", line 24, in check_response
+    super(MobileErrorHandler, self).check_response(response)
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python35\lib\site-packages\selenium\webdriver\remote\errorhandler.py", line 194, in check_response
+    raise exception_class(message, screen, stacktrace)
+selenium.common.exceptions.WebDriverException: Message: An unknown server-side error occurred while processing the command. Original error: Could not proxy command to remote server. Original error: Error: read ECONNRESET
+
+
+
+        </pre>
+    </div>
+    <!--css div popup end-->
+
+    </td>
+    <td colspan='1' align='center'>
+No Case Detail
+</td>
+</tr>
+
+<tr id='Et3.10' class='none'>
+    <td class='errorCase'><div class='testcase'>test08: 预览模块，验证码个人信息是否与主页面一致</div></td>
+    <td colspan='4' align='center'>
+
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_Et3.10')" >
+        error</a>
+
+    <div id='div_Et3.10' class="popup_window">
+        <div style='text-align: right; color:red;cursor:pointer'>
+        <a onfocus='this.blur();' onclick="document.getElementById('div_Et3.10').style.display = 'none' " >
+           [x]</a>
+        </div>
+        <pre>
+        
+Et3.10: [2017-11-11 11:04:49,785](INFO)root : ****************************************
+[2017-11-11 11:04:49,785](INFO)root : &gt;&gt;&gt;获取元素：com.henji.yunyi.yizhibang:id/et_login_phone
+Traceback (most recent call last):
+  File "C:\Users\Administrator\Desktop\python01\fengfan_unittest\feng_test_method\method.py", line 130, in backLogin
+    x1 = self.driver.get_window_size()['width']
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python35\lib\site-packages\selenium\webdriver\remote\webdriver.py", line 969, in get_window_size
+    size = self.execute(command, {'windowHandle': windowHandle})
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python35\lib\site-packages\selenium\webdriver\remote\webdriver.py", line 308, in execute
+    self.error_handler.check_response(response)
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python35\lib\site-packages\appium\webdriver\errorhandler.py", line 29, in check_response
+    raise wde
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python35\lib\site-packages\appium\webdriver\errorhandler.py", line 24, in check_response
+    super(MobileErrorHandler, self).check_response(response)
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python35\lib\site-packages\selenium\webdriver\remote\errorhandler.py", line 194, in check_response
+    raise exception_class(message, screen, stacktrace)
+selenium.common.exceptions.WebDriverException: Message: An unknown server-side error occurred while processing the command. Original error: Could not proxy command to remote server. Original error: Error: read ECONNRESET
+
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\Administrator\Desktop\python01\fengfan_unittest\feng_test_case\test_case003_SmallNetWork.py", line 19, in tearDown
+    startMethod.backLogin(self, a=None, b=None)
+  File "C:\Users\Administrator\Desktop\python01\fengfan_unittest\feng_test_method\method.py", line 152, in backLogin
+    self.driver.find_element_by_xpath('//android.widget.TextView[@text=\"设置\"]').click()
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python35\lib\site-packages\selenium\webdriver\remote\webdriver.py", line 365, in find_element_by_xpath
+    return self.find_element(by=By.XPATH, value=xpath)
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python35\lib\site-packages\selenium\webdriver\remote\webdriver.py", line 843, in find_element
+    'value': value})['value']
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python35\lib\site-packages\selenium\webdriver\remote\webdriver.py", line 308, in execute
+    self.error_handler.check_response(response)
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python35\lib\site-packages\appium\webdriver\errorhandler.py", line 29, in check_response
+    raise wde
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python35\lib\site-packages\appium\webdriver\errorhandler.py", line 24, in check_response
+    super(MobileErrorHandler, self).check_response(response)
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python35\lib\site-packages\selenium\webdriver\remote\errorhandler.py", line 194, in check_response
+    raise exception_class(message, screen, stacktrace)
+selenium.common.exceptions.WebDriverException: Message: An unknown server-side error occurred while processing the command. Original error: Could not proxy command to remote server. Original error: Error: read ECONNRESET
+
+
+
+        </pre>
+    </div>
+    <!--css div popup end-->
+
+    </td>
+    <td colspan='1' align='center'>
+No Case Detail
+</td>
+</tr>
+
+<tr id='Ft3.11' class='none'>
+    <td class='failCase'><div class='testcase'>test09: 获取六个栏目内容是否存在以及加载</div></td>
+    <td colspan='4' align='center'>
+
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_Ft3.11')" >
+        fail</a>
+
+    <div id='div_Ft3.11' class="popup_window">
+        <div style='text-align: right; color:red;cursor:pointer'>
+        <a onfocus='this.blur();' onclick="document.getElementById('div_Ft3.11').style.display = 'none' " >
+           [x]</a>
+        </div>
+        <pre>
+        
+Ft3.11: [2017-11-11 11:05:55,624](INFO)root : 0
+[2017-11-11 11:06:06,514](INFO)root : 3
+Traceback (most recent call last):
+  File "C:\Users\Administrator\Desktop\python01\fengfan_unittest\feng_test_case\test_case003_SmallNetWork.py", line 249, in test09
+    self.driver.find_element_by_xpath('//android.widget.ListView/android.view.View[1]/android.widget.ListView[1]')
+selenium.common.exceptions.NoSuchElementException: Message: An element could not be located on the page using the given search parameters.
+
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\Administrator\Desktop\python01\fengfan_unittest\feng_test_case\test_case003_SmallNetWork.py", line 262, in test09
+    self.assertEqual(1,2,msg='预览页面六个栏目获取异常')
+AssertionError: 1 != 2 : 预览页面六个栏目获取异常
+
+
+        </pre>
+    </div>
+    <!--css div popup end-->
+
+    </td>
+    <td colspan='1' align='center'>
+No Case Detail
+</td>
+</tr>
+
+<tr id='Ft3.12' class='none'>
+    <td class='failCase'><div class='testcase'>test10: 获取底部导航栏</div></td>
+    <td colspan='4' align='center'>
+
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_Ft3.12')" >
+        fail</a>
+
+    <div id='div_Ft3.12' class="popup_window">
+        <div style='text-align: right; color:red;cursor:pointer'>
+        <a onfocus='this.blur();' onclick="document.getElementById('div_Ft3.12').style.display = 'none' " >
+           [x]</a>
+        </div>
+        <pre>
+        
+Ft3.12: Traceback (most recent call last):
+  File "C:\Users\Administrator\Desktop\python01\fengfan_unittest\feng_test_case\test_case003_SmallNetWork.py", line 266, in test10
+    self.driver.find_element_by_xpath('//android.view.View[@content-desc=\"p 进入首页\"]')
+selenium.common.exceptions.NoSuchElementException: Message: An element could not be located on the page using the given search parameters.
+
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\Administrator\Desktop\python01\fengfan_unittest\feng_test_case\test_case003_SmallNetWork.py", line 272, in test10
+    self.assertEqual(1,2,msg='获取品牌微网预览页面，底部导航栏异常')
+AssertionError: 1 != 2 : 获取品牌微网预览页面，底部导航栏异常
+
+
+        </pre>
+    </div>
+    <!--css div popup end-->
+
+    </td>
+    <td colspan='1' align='center'>
+No Case Detail
+</td>
+</tr>
+
+<tr id='Et3.13' class='none'>
+    <td class='errorCase'><div class='testcase'>test10: 获取底部导航栏</div></td>
+    <td colspan='4' align='center'>
+
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_Et3.13')" >
+        error</a>
+
+    <div id='div_Et3.13' class="popup_window">
+        <div style='text-align: right; color:red;cursor:pointer'>
+        <a onfocus='this.blur();' onclick="document.getElementById('div_Et3.13').style.display = 'none' " >
+           [x]</a>
+        </div>
+        <pre>
+        
+Et3.13: Traceback (most recent call last):
+  File "C:\Users\Administrator\Desktop\python01\fengfan_unittest\feng_test_method\method.py", line 134, in backLogin
+    self.driver.find_element_by_id('com.henji.yunyi.yizhibang:id/rl_home_mine').click()  # 点击“我”
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python35\lib\site-packages\selenium\webdriver\remote\webdriver.py", line 341, in find_element_by_id
+    return self.find_element(by=By.ID, value=id_)
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python35\lib\site-packages\selenium\webdriver\remote\webdriver.py", line 843, in find_element
+    'value': value})['value']
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python35\lib\site-packages\selenium\webdriver\remote\webdriver.py", line 308, in execute
+    self.error_handler.check_response(response)
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python35\lib\site-packages\appium\webdriver\errorhandler.py", line 29, in check_response
+    raise wde
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python35\lib\site-packages\appium\webdriver\errorhandler.py", line 24, in check_response
+    super(MobileErrorHandler, self).check_response(response)
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python35\lib\site-packages\selenium\webdriver\remote\errorhandler.py", line 194, in check_response
+    raise exception_class(message, screen, stacktrace)
+selenium.common.exceptions.NoSuchElementException: Message: An element could not be located on the page using the given search parameters.
+
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\Administrator\Desktop\python01\fengfan_unittest\feng_test_case\test_case003_SmallNetWork.py", line 19, in tearDown
+    startMethod.backLogin(self, a=None, b=None)
+  File "C:\Users\Administrator\Desktop\python01\fengfan_unittest\feng_test_method\method.py", line 152, in backLogin
+    self.driver.find_element_by_xpath('//android.widget.TextView[@text=\"设置\"]').click()
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python35\lib\site-packages\selenium\webdriver\remote\webdriver.py", line 365, in find_element_by_xpath
+    return self.find_element(by=By.XPATH, value=xpath)
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python35\lib\site-packages\selenium\webdriver\remote\webdriver.py", line 843, in find_element
+    'value': value})['value']
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python35\lib\site-packages\selenium\webdriver\remote\webdriver.py", line 308, in execute
+    self.error_handler.check_response(response)
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python35\lib\site-packages\appium\webdriver\errorhandler.py", line 29, in check_response
+    raise wde
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python35\lib\site-packages\appium\webdriver\errorhandler.py", line 24, in check_response
+    super(MobileErrorHandler, self).check_response(response)
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python35\lib\site-packages\selenium\webdriver\remote\errorhandler.py", line 194, in check_response
+    raise exception_class(message, screen, stacktrace)
+selenium.common.exceptions.NoSuchElementException: Message: An element could not be located on the page using the given search parameters.
+
+
+
+        </pre>
+    </div>
+    <!--css div popup end-->
+
+    </td>
+    <td colspan='1' align='center'>
+No Case Detail
+</td>
+</tr>
+
+<tr id='Et3.14' class='none'>
+    <td class='errorCase'><div class='testcase'>test11: 品牌微网预览页面微网注册</div></td>
+    <td colspan='4' align='center'>
+
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_Et3.14')" >
+        error</a>
+
+    <div id='div_Et3.14' class="popup_window">
+        <div style='text-align: right; color:red;cursor:pointer'>
+        <a onfocus='this.blur();' onclick="document.getElementById('div_Et3.14').style.display = 'none' " >
+           [x]</a>
+        </div>
+        <pre>
+        
+Et3.14: Traceback (most recent call last):
+  File "C:\Users\Administrator\Desktop\python01\fengfan_unittest\feng_test_method\method.py", line 134, in backLogin
+    self.driver.find_element_by_id('com.henji.yunyi.yizhibang:id/rl_home_mine').click()  # 点击“我”
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python35\lib\site-packages\selenium\webdriver\remote\webdriver.py", line 341, in find_element_by_id
+    return self.find_element(by=By.ID, value=id_)
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python35\lib\site-packages\selenium\webdriver\remote\webdriver.py", line 843, in find_element
+    'value': value})['value']
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python35\lib\site-packages\selenium\webdriver\remote\webdriver.py", line 308, in execute
+    self.error_handler.check_response(response)
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python35\lib\site-packages\appium\webdriver\errorhandler.py", line 29, in check_response
+    raise wde
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python35\lib\site-packages\appium\webdriver\errorhandler.py", line 24, in check_response
+    super(MobileErrorHandler, self).check_response(response)
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python35\lib\site-packages\selenium\webdriver\remote\errorhandler.py", line 194, in check_response
+    raise exception_class(message, screen, stacktrace)
+selenium.common.exceptions.NoSuchElementException: Message: An element could not be located on the page using the given search parameters.
+
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\Administrator\Desktop\python01\fengfan_unittest\feng_test_case\test_case003_SmallNetWork.py", line 19, in tearDown
+    startMethod.backLogin(self, a=None, b=None)
+  File "C:\Users\Administrator\Desktop\python01\fengfan_unittest\feng_test_method\method.py", line 152, in backLogin
+    self.driver.find_element_by_xpath('//android.widget.TextView[@text=\"设置\"]').click()
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python35\lib\site-packages\selenium\webdriver\remote\webdriver.py", line 365, in find_element_by_xpath
+    return self.find_element(by=By.XPATH, value=xpath)
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python35\lib\site-packages\selenium\webdriver\remote\webdriver.py", line 843, in find_element
+    'value': value})['value']
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python35\lib\site-packages\selenium\webdriver\remote\webdriver.py", line 308, in execute
+    self.error_handler.check_response(response)
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python35\lib\site-packages\appium\webdriver\errorhandler.py", line 29, in check_response
+    raise wde
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python35\lib\site-packages\appium\webdriver\errorhandler.py", line 24, in check_response
+    super(MobileErrorHandler, self).check_response(response)
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python35\lib\site-packages\selenium\webdriver\remote\errorhandler.py", line 194, in check_response
+    raise exception_class(message, screen, stacktrace)
+selenium.common.exceptions.NoSuchElementException: Message: An element could not be located on the page using the given search parameters.
+
+
+
+        </pre>
+    </div>
+    <!--css div popup end-->
+
+    </td>
+    <td colspan='1' align='center'>
+No Case Detail
+</td>
+</tr>
+
+<tr class='errorClass'>
+    <td>test_ceshi.Blood</td>
+    <td>1</td>
+    <td>0</td>
+    <td>0</td>
+    <td>1</td>
+    <td><a href="javascript:showClassDetail('c4',1)">Detail</a></td>
+</tr>
+
+<tr id='Et4.1' class='none'>
+    <td class='errorCase'><div class='testcase'>test_03: 验证轮播图2页面跳转</div></td>
+    <td colspan='4' align='center'>
+
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_Et4.1')" >
+        error</a>
+
+    <div id='div_Et4.1' class="popup_window">
+        <div style='text-align: right; color:red;cursor:pointer'>
+        <a onfocus='this.blur();' onclick="document.getElementById('div_Et4.1').style.display = 'none' " >
+           [x]</a>
+        </div>
+        <pre>
+        
+Et4.1: Traceback (most recent call last):
+  File "C:\Users\Administrator\Desktop\python01\fengfan_unittest\feng_test_case\test_ceshi.py", line 19, in test_03
+    self.driver.find_element_by_xpath(r'//android.view.View[@content-desc={}]'.format(name))
+NameError: name 'name' is not defined
+
+
+        </pre>
+    </div>
+    <!--css div popup end-->
+
+    </td>
+    <td colspan='1' align='center'>
+No Case Detail
+</td>
+</tr>
+
+<tr id='total_row'>
+    <td>Total and Rate</td>
+    <td>28</td>
+    <td>15</td>
+    <td>3</td>
+    <td>10</td>
+    <td>Proportion:15/28</td>
+</tr>
+</table>
+
+<div id='ending'>&nbsp;</div>
+<div class="bg">
+                       <div class="panelBg"></div>  
+                       <div class="panel"> 
+                       <div id="section1"> 
+                           <div class="title">Pie Chart</div>  
+                           <div class="subTitle">This chart is to show the rate that statis of test cases</div> 
+                           <div class="piechart">   
+                               <canvas id="circle" width="225" height="168" onmousemove='javascript:drawCircle(15, 3, 10)'>your browser does not support the canvas tag</canvas>
+                           </div> 
+                           <div class="description">  
+                           <div class="scroll-item item-even">  
+                               <div class="rect" style="background-color: #6c6; "></div>  
+                               <div class="item-text">Passcase:15</div>  
+                           </div>  
+                           <div class="scroll-item item-odd">  
+                               <div class="rect" style="background-color: #c60; "></div>  
+                               <div class="item-text">failcase:3</div>  
+                           </div>   
+                           <div class="scroll-item item-even">  
+                               <div class="rect" style="background-color: #c00; "></div>  
+                               <div class="item-text">errorcase:10</div>  
+                           </div> 
+                           <div class="scroll-item item-odd">  
+                           </div> 
+                           <div class="scroll-item item-even">    
+                           </div> 
+                       </div> 
+
+                       </div>  
+                       <div id="section2">  
+                       <div class="title">Bar Chart</div>  
+                           <div class="subTitle">This chart is to show the count that statis of test cases</div> 
+                           <div class="barchart">   
+                               <canvas id="bar" width="225" height="168" onclick='javascript:drawBar(15, 3, 10)'>your browser does not support the canvas tag</canvas>
+                           </div> 
+                           <div class="description">  
+                           <div class="scroll-item item-even">  
+                               <div class="rect" style="background-color: #6c6; "></div>  
+                               <div class="item-text">Passcase:15</div>  
+                           </div>  
+                           <div class="scroll-item item-odd">  
+                               <div class="rect" style="background-color: #c60; "></div>  
+                               <div class="item-text">failcase:3</div>  
+                           </div>   
+                           <div class="scroll-item item-even">  
+                               <div class="rect" style="background-color: #c00; "></div>  
+                               <div class="item-text">errorcase:10</div>  
+                           </div> 
+                           <div class="scroll-item item-odd">  
+                           </div> 
+                           <div class="scroll-item item-even">    
+                           </div> 
+                       </div> 
+
+                       </div>  
+                       <div id="section3"> 
+                        <div class="title">Line Chart</div>  
+                           <div class="subTitle">This chart is to show the rate that data of test cases</div> 
+                           <div class="linechart">   
+                               <canvas id="line" width="225" height="168" onclick='javascript:drawline(15, 3, 10)'>your browser does not support the canvas tag</canvas>
+                           </div> 
+                           <div class="description">  
+                           <div class="scroll-item item-even">  
+                               <div class="rect" style="background-color: #6c6; "></div>  
+                               <div class="item-text">Passcase:15</div>  
+                           </div>  
+                           <div class="scroll-item item-odd">  
+                               <div class="rect" style="background-color: #c60; "></div>  
+                               <div class="item-text">failcase:3</div>  
+                           </div>   
+                           <div class="scroll-item item-even">  
+                               <div class="rect" style="background-color: #c00; "></div>  
+                               <div class="item-text">errorcase:10</div>  
+                           </div> 
+                           <div class="scroll-item item-odd">  
+                           </div> 
+                           <div class="scroll-item item-even">    
+                           </div> 
+                       </div> 
+
+                       </div>
+                       </div>
+                       <div class="panel1">
+                       <div id="section4">
+                           <a>15 Pass cases, 3 fail cases, 10 error cases.</a>
+                       </div>
+                       </div>
+                    </div>
+</body>
+</html>
+<script type="text/javascript"> 
+function drawCircle(pass, fail, error){ 
+    var color = ["#6c6","#c60","#c00"];  
+    var data = [pass,fail,error]; 
+    var canvas = document.getElementById("circle");  
+    var ctx = canvas.getContext("2d");  
+    var startPoint=0;  
+    for(var i=0;i<data.length;i++){  
+        ctx.fillStyle = color[i];  
+        ctx.beginPath();  
+        ctx.moveTo(112,84);   
+        ctx.arc(112,84,84,startPoint,startPoint+Math.PI*2*(data[i]/(data[0]+data[1]+data[2])),false);  
+        ctx.fill();  
+        startPoint += Math.PI*2*(data[i]/(data[0]+data[1]+data[2]));  
+    }  
+}
+
+function FillRect(cxt, x1, y1, width, height, color) {
+    cxt.fillStyle = color; 
+    cxt.fillRect(x1, y1, width, height);
+} 
+
+function drawBar(pass, fail, error){ 
+
+    var color = ["#6c6","#c60","#c00"];  
+    var data = [pass,fail,error];
+    var count = pass + fail + error;
+    var h =[10+(1 - pass/count)*148,10+(1 - fail/count)*148,10+(1 - error/count)*148];
+    var x = [30,90,150];
+    var y = [70,130,190];
+    var canvas = document.getElementById("bar");  
+    var ctx = canvas.getContext("2d");
+    DrawString(ctx, 'Count(c)', '', '', '', '', 15, 10)
+    DrawLine(ctx,5,15,10,10,'black');
+    DrawLine(ctx,15,15,10,10,'black');
+    DrawLine(ctx,10,10,10,158,'black');
+    DrawLine(ctx,10,158,215,158,'black');
+    DrawLine(ctx,210,153,215,158,'black');
+    DrawLine(ctx,210,163,215,158,'black');
+    DrawString(ctx, 'Type(c)', '', '', '', '', 180, 160)
+    for(var i=0;i<3;i++) {
+        DrawLine(ctx,x[i],h[i],x[i],158,color[i]);
+        DrawLine(ctx,x[i],h[i],y[i],h[i],color[i]);
+        DrawLine(ctx,y[i],h[i],y[i],158,color[i]); 
+        DrawLine(ctx,(y[i]+x[i])/2,153,(y[i]+x[i])/2,158,color[i]);
+        DrawString(ctx, data[i], '', color[i], '', '', (y[i]+x[i])/2, h[i]-15);
+        FillRect(ctx, x[i], h[i], 40, 158-h[i], color[i]);
+    }
+} 
+
+function DrawP(ctx, P) {
+    with (ctx) {
+        moveTo(P[0],P[1]);
+        lineTo(P[0]+1,P[1]+1);
+     }
+}
+
+function DrawLine(cxt, x1, y1, x2, y2, color) {
+
+    cxt.strokeStyle = color;
+    cxt.beginPath();
+    cxt.moveTo(x1, y1);
+    cxt.lineTo(x2, y2);
+    cxt.stroke();
+}
+
+function DrawString(cxt, text, font, color, align, v_align, x, y) {
+    if (font == "") {
+        cxt.font = "10px";
+    }
+    else {
+        cxt.font = font;
+    }
+    if (color == "") {
+        cxt.fillStyle = "#000000";
+    }
+    else {
+        cxt.fillStyle = color;
+    }
+    if (align == "") {
+        cxt.textAlign = "left";
+    }
+    else {
+        cxt.textAlign = align;
+    }
+    if (v_align == "") {
+        cxt.textBaseline = "top";
+    }
+    else {
+        cxt.textBaseline = v_align;
+    }
+    cxt.fillText(text, x, y);
+}
+
+function drawline(pass, fail, error){ 
+    var color = ["#6c6","#c60","#c00"];  
+    var data = [pass,fail,error];
+    var count = pass + fail + error;
+    var x = [30,90,150];
+    var y = [70,130,190];
+    var h =[10+(1 - pass/count)*148,10+(1 - fail/count)*148,10+(1 - error/count)*148];
+    var canvas = document.getElementById("line");  
+    var ctx = canvas.getContext("2d");
+    DrawString(ctx, 'Count(c)', '', '', '', '', 15, 10)
+    DrawLine(ctx,5,15,10,10,'black');
+    DrawLine(ctx,15,15,10,10,'black');
+    DrawLine(ctx,10,10,10,158,'black');
+    DrawLine(ctx,10,158,215,158,'black');
+    DrawLine(ctx,210,153,215,158,'black');
+    DrawLine(ctx,210,163,215,158,'black');
+    DrawString(ctx, 'Type(c)', '', '', '', '', 180, 160)
+    for(var i=0;i<3;i++) {
+        p = Array((y[i]+x[i])/2,h[i]);
+        DrawP(ctx,p);
+        DrawLine(ctx,(y[i]+x[i])/2,153,(y[i]+x[i])/2,158,color[i]);
+        DrawString(ctx, data[i], '', color[i], '', '', (y[i]+x[i])/2, h[i]-15);
+        if(i < 2) {
+        
+            DrawLine(ctx,(y[i]+x[i])/2,h[i],(y[i+1]+x[i+1])/2,h[i+1],'black');
+            
+        }
+        
+    }
+    
+} 
+
+</script>  
